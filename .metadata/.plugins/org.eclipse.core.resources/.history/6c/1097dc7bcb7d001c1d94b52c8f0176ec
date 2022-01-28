@@ -1,0 +1,66 @@
+package day_04;
+
+public class Class_05 {
+	public static void main(String[] args) {
+		// 내부 클래스
+		// 클래스 간 관계가 긴밀할때 사용하여 코드를 간결하게 하기 위해 사용
+		// class 클래스명 {
+		// 			class 클래스명{
+		//					... 
+		//  						}
+		// }
+		// 인스턴스 클래스
+		// 외부클래스에서 멤버변수위치에 선언
+		// 클래스 내부에서 인스턴스멤버처럼 다뤄지며, 인스턴스 멤버들과 상호작용 가능
+
+		// 스태틱 클래스
+		// 외부클래스에서 멤버변수위치에선언
+		// 메서드에 static 키워드를 사용하여 구현
+		// 클래스 내부에서 스테틱 멤버처럼 다뤄지며 다른 멤버들과 상호작용 가능
+		// static메서드에서 인스턴스 변수를 사용할 수 없음.
+		
+		// 지역클래스
+		// 메서드 내부 지역변수 위치에 선언
+		// 메서드나 초기화블록의 내부에서 다뤄지며 선언된 영역 내부에서 사용
+		
+		//지역변수
+		// 함수내부에 선언되어 함수내부에서만 사용 / 메모리 : 스택 / 함수가 호출시 생성되고 함수가 끝나면 소멸
+		// 멤버변수 
+		// 클래스멤버 변수로 선언되어 클래스 내부에서 사용하고 , private가 아니면 다른클래서에서 사용사능
+		// 메모리 : 힙 (heap) / 인스턴스가 생성될 때 힙에 생성되고, 가비지컬렉터가 수거할떄 소멸
+		OuterClass oc= new OuterClass();
+		System.out.println("OuterClass의 a의 값: " + oc.a);
+		System.out.println("OuterClass의 b의 값: " + OuterClass.b);
+		
+		System.out.println("===inner 클래스 접근하기 ====");
+		OuterClass oc2 = new OuterClass();
+		OuterClass.Inner i = oc2.new Inner();
+		
+		System.out.println("Inner의 c의 값:" + i.c);
+		i.innerMethod();
+		
+		OuterClass.StaticInner si = new OuterClass.StaticInner();
+		System.out.println("StaticInner의 d의 값 :" +si.d);
+		
+//		si.staticMethod(); : 객체를 사용하지 않고 클래스명을 사용해서 호출가능
+		OuterClass.StaticInner.staticMethod();
+}}
+
+class OuterClass{
+	int a=3; 
+	static int b=4;
+	class Inner{
+		int c=5;
+		public void innerMethod() {
+			System.out.println("<Inner Class>");
+	}	
+}
+	
+	static class StaticInner{
+		int d=6;
+		static int stat=10;
+		public static void staticMethod() {
+			System.out.println("<Static Inner>");
+		}
+	}
+}

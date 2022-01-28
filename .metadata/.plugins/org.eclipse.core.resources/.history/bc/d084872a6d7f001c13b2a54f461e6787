@@ -1,0 +1,10 @@
+package day_01;
+
+public class Z_practice_02 {
+	public static void main(String[] args) {
+		// 로또 번호 생성기 프로그램
+		
+
+	}
+
+}

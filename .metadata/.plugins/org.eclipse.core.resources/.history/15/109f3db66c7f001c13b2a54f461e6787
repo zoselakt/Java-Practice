@@ -1,0 +1,16 @@
+package day_01;
+
+public class Z_practice_02 {
+		class Person{
+			private int num;
+			private String name;
+			private String age;
+			
+			public Person(String name, String age) {
+				this.name = name;
+				this.age = age;
+			}
+		}
+		
+	
+}

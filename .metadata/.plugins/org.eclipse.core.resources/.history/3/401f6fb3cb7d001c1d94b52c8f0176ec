@@ -1,0 +1,37 @@
+package day_04;
+
+public class Class_04 {
+	public static void main(String[] args) {
+		// this : 생성된 인스턴스 스스로를 가리키는 예약어.
+		// this를 생략하게 되면 파라미터로 사용되는 name과 age로 인식된다.
+		
+		// 멤버변수 
+		// 클래스멤버 변수로 선언되어 클래스 내부에서 사용하고 , private가 아니면 다른클래스에서 사용가능
+		// 메모리 : 힙 (heap) / 인스턴스가 생성될 때 힙에 생성되고, 가비지컬렉터가 수거할떄 소멸
+		ㄴ
+		// static변수(클래스변수) : static예약어를 사용하여 클래스 내부에 선언 / private가 아니면 다른클래스에서 사용가능
+		// 메모리: 데이터영역 / 프로그램이 처음 시작할 때 상수와 함께 데이터 영역에 생성되고 프로그램이 끝나고 메모리를 해제할때 소멸
+
+		
+			Iphone myphone1 = new Iphone();
+			Iphone myphone2 = new Iphone("iphone SE", "white", 70);
+			System.out.println(myphone1.capacity);
+			System.out.println(myphone2.capacity);
+}}
+
+class Iphone{
+	String model;
+	String color;
+	int capacity;
+	Iphone(){}
+	Iphone(String model, String color, int capacity){
+	this.model = model;
+	this.color = color;
+	this.capacity = capacity;
+}
+	void info() {
+		System.out.println("model:" + model);
+		System.out.println("color:" + color);
+		System.out.println("capacity:" + capacity);
+	}
+}

@@ -1,0 +1,15 @@
+package day_01;
+
+public class Any_01 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}}
+
+// 접근제한자 클래스선언 Any_01(클래스명) {
+//	접근제한자 static 반환타입 메서드이름(파라미터)
+
+//1. 접근제한자 : public, private, protecte, default
+		
+//------------------------------------------------------------------------------------
+
+

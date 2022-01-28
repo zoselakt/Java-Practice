@@ -1,0 +1,29 @@
+package day_04;
+
+public class Class_04 {
+	public static void main(String[] args) {
+		// this : 생성된 인스턴스 스스로를 가리키는 예약어.
+		// this를 생략하게 되면 파라미터로 사용되는 name과 age로 인식된다.
+		
+			Iphone myphone1 = new Iphone();
+			Iphone myphone2 = new Iphone("iphone SE", "white", 70);
+			System.out.println(myphone1.capacity);
+			System.out.println(myphone2.capacity);
+}}
+
+class Iphone{
+	String model;
+	String color;
+	int capacity;
+	Iphone(){}
+	Iphone(String model, String color, int capacity){
+	this.model = model;
+	this.color = color;
+	this.capacity = capacity;
+}
+	void info() {
+		System.out.println("model:" + model);
+		System.out.println("color:" + color);
+		System.out.println("capacity:" + capacity);
+	}
+}

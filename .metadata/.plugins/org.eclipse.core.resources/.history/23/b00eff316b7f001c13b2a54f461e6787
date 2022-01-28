@@ -1,0 +1,16 @@
+package day_01;
+
+import java.util.Scanner;
+
+public class Z_Practice {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String a = sc.nextLine();
+		
+		for(int i = a.charAt(0); i <= a.charAt(2); i++) {
+			System.out.print((char)i + " ");
+		}
+	}
+}
+
