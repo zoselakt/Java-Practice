@@ -1,6 +1,6 @@
 package day_03;
 
-public class Downcasting_practice {
+public class Class_Downcasting_practice {
 	public static void main(String[] args) {
 		Animal Lion1 = new Lion();
 		Lion l = new Lion();

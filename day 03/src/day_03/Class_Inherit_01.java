@@ -1,6 +1,6 @@
 package day_03;
 
-public class Inherit_01 {
+public class Class_Inherit_01 {
 	public static void main(String[] args) {
 		// class 클래스명 extends 부모클래스명{
 		// ...

@@ -1,6 +1,6 @@
 package day_03;
 
-public class Class_07 {
+public class Class_Subject {
 	// 참조 클래스 (Subject) 
 	// 참조클래스는 
 
@@ -9,12 +9,12 @@ public class Class_07 {
 	Subject korea;
 	Subject math;
 	
-	public Class_07() {
+	public Class_Subject() {
 		korea = new Subject("국어");
 		math = new Subject("수학");
 	}
 	
-	public Class_07(int id, String name) {
+	public Class_Subject(int id, String name) {
 		studentID = id;
 		studentName= name;
 		
@@ -35,11 +35,11 @@ public class Class_07 {
 
 public static void main(String[] args) {
 		// name
-	Class_07 James = new Class_07();
+	Class_Subject James = new Class_Subject();
 	James.setKorea(70);
 	James.setMath(20);
 		
-	Class_07 Tomas = new Class_07();
+	Class_Subject Tomas = new Class_Subject();
 	Tomas.setKorea(70);
 	Tomas.setMath(90);
 		

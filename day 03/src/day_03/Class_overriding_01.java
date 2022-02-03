@@ -1,6 +1,6 @@
 package day_03;
 
-public class overriding_01 {
+public class Class_overriding_01 {
 	public static void main(String[] args) {
 		// 오버라이딩(메서드 재정의)
 		// 자식클래스가 부모클래스의 메서드를 다시 정의하는것.

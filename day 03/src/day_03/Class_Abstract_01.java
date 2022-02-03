@@ -1,6 +1,6 @@
 package day_03;
 
-public class Abstract_01 {
+public class Class_Abstract_01 {
 
 	public static void main(String[] args) {
 		// 추상클래스: 선언부만 정의하고 구체적인 내용은 비워놓은 메서드
