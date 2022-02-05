@@ -1,9 +1,0 @@
-package day_01;
-
-public class Z_practice_03 {
-	public static void main(String[] args) {
-		// 카페주문프로그램
-
-	}
-
-}

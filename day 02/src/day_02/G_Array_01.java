@@ -16,9 +16,9 @@ public class G_Array_01 {
 				System.out.println("2번째 학생의 점수: "+score[1]+"점");
 				System.out.println("3번째 학생의 점수: "+score[2]+"점");
 				
-			// length
+			// length: 배일의 길이
 //				int []a=new int[] {10,20,4,25,18};  // 순서상관 x
-//				int []b= {1,2,3,4,5,6,7};
+//				int []b= {1,2,3,4,5,6,7}; // 배열을 선언함과 동시에 초기화 / {} 안에 특정값을넣어 특정값으로 출력
 				
 				int c[]= new int[10];
 				for(int i=0; i<c.length;i++) {
@@ -30,6 +30,9 @@ public class G_Array_01 {
 				// for 문으로 배열활용
 				for(int i = 0; i < 3; i++) {
 					System.out.println(i + 1 + "번째 학생의 점수: " + score[i] + "점");	}
+				
+				//마지막 요소값 출력
+//				System.out.println(ar[ar.length - 1]); 
 
 //---------------------------------------------------------------------------------------
 

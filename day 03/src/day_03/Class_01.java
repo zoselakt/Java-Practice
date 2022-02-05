@@ -14,6 +14,7 @@ public class Class_01 {
 		// static 예약어가 붙지 않고 자료형 + 변수만으로 작성된 변수 
 		
 		// static변수(클래스변수) : 메모리저장 : 데이터영역
+		// 모든 인스턴스가 같은 저장공간을 공유 - 하나의 내용을 바꿔도 모두 바뀐다./인스턴스생성없이 사용가능
 		// static예약어를 사용하여 클래스 내부에 선언, private가 아니면 다른클래스에서 사용가능 
 		// 지역변수는 클래스내부에 사용되어 함수가 끝나면 소멸되어 사용되지만, 
 		// 프로그램이 처음 시작할 때 상수와 함께 데이터 영역에 생성되고 프로그램이 끝나고 메모리를 해제할때 소멸		
@@ -23,8 +24,12 @@ public class Class_01 {
 		// 		 속성(변수)
 		//       기능(메서드)
 		
-		// 객체(인스턴스) 생성방법
-		// 		자료형(클래스명) 참조변수 = new 클래스명();
+		// 호출방법 
+		// 객체(인스턴스) 생성 : 자료형(클래스명) 참조변수 = new 클래스명(); / Car mycar = new Car();
+		// 클래스변수 생성: 참조변수명.메소드명(멤버변수)
+		
+		// 클래스변수안에는 멤버변수를 사용할수없다. (인스턴스변수는 객체를 만들어야하기 때문)
+		// system.out.println : system.out = static이 붙은 (클래스)변수
 				
 class Car{ // class {} 안에는 멤버변수 / static이 붙으면 클래스변수
 	boolean poweron; // 인스턴스 변수
@@ -33,12 +38,14 @@ class Car{ // class {} 안에는 멤버변수 / static이 붙으면 클래스변수
 	int speed;
 	boolean wiperon;
 	
-	void power() {poweron =! poweron;} 
+	void power() {poweron =! poweron;}  // 메서드
 	void speedup() {speed++;}
 //	void speedDown() {speed--;}
 	void wiper() {wiperon =! wiperon;}
 	}
-	
+
+//생성자 : 인스턴스(객체)를 생성할때 호출 / 생성자명은 클래스명과 동일 / 메서드와 비슷하나 반환타입이 없어야한다.
+//멤버변수를 초기화할때 사용한다.	
 	Car mycar = new Car();  // 인스턴스생성
 	System.out.println("시동 처음 초기화:" + mycar.poweron); // 인스턴스 변수 사용
 	System.out.println("차의 색상 초기화:" + mycar.color);
@@ -61,9 +68,9 @@ class Car{ // class {} 안에는 멤버변수 / static이 붙으면 클래스변수
 	System.out.println("현재 차의 색상:" + mycar.color);
 //------------------------------------------------------------------------------------		
 System.out.println("------------------------------------------------------------------------------------");
-
+// 클래스의 구성요소 : 속성(필드) + 메서드(생성자) = 속성 →클래스/멤버변수 
 class Member{
-	static String centerName ="Hello";
+	static String centerName ="Hello"; //클래스변수
 	String name;
 	int age;
 	String gender;
@@ -109,9 +116,10 @@ member4.info();
 System.out.println("------------------------------------------------------------------------------------");
 
 //객체타입 배열
+// 같은클래스로 만들어진 변수들의 집합 / 객체값을 다르게 할수있다.
 Animal animals[]= new Animal[3];
 for(int i =0; i<3; i++) {
-animals[i] = new Animal();
+animals[i] = new Animal(); // 클래스로 만들어진 객체를 관리할 객체배열 생성
 }
 
 animals[0].kind="고양이";

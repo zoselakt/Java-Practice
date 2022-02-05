@@ -11,7 +11,7 @@ public class G_Array_02 {
 		// dest: 덮어쓸 배열 / destPos: 덮어쓰기 시작할 위치
 		// length: 복사할길이
 		
-		int [] a= {1,2,3,4,5,6};
+		int [] a= {1,2,3,4,5,6};   
 		int [] b= {0,0,0,0,0,0,0};
 		
 		System.out.println(Arrays.toString(a));
