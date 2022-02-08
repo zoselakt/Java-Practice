@@ -20,8 +20,7 @@ public class G_Array_02 {
 		//복제
 		System.arraycopy(a,      2,     b,     3,       4);
 //		System.arraycopy(src, srcpos, dest, destpos, length);
-
-		System.out.println(Arrays.toString(b));
+		System.out.println(Arrays.toString(b)); // a를 b에 복사하는거라 b로 출력해야함.
 		
 //---------------------------------------------------------------------------------------
 // for each 문

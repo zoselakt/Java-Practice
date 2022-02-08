@@ -9,7 +9,6 @@ public class Class_01 {
 		// 클래스멤버 변수로 선언되어 클래스 내부에서 사용하고 , private가 아니면 다른클래스에서 
 		// instance변수와 static변수 모두 인스턴스생성(초기화)시 사용되어진다.
 		// class Car 밑 자료형+변수들은 멤버변수
-		// 초기화를 하지 않을경우 default 값이 들어간다. int는 0, String은 null값이 들어간다.
 		// 같은 클래스를 사용하면 클래스명을 생략할 수있다.
 		
  		// instance 변수: 
@@ -76,6 +75,16 @@ System.out.println("------------------------------------------------------------
 
 //객체타입 배열
 // 같은클래스로 만들어진 변수들의 집합 / 객체값을 다르게 할수있다.
+class Animal{
+	String kind;
+	String name;
+	int age;
+	void info() {
+	System.out.println("kind:" + kind);
+	System.out.println("name:" + name);
+	System.out.println("age:" + age);
+	}
+}
 	Animal animals[]= new Animal[3];
 	
 	for(int i =0; i<3; i++) {
@@ -97,38 +106,25 @@ System.out.println("------------------------------------------------------------
 	for(int i=0; i<3; i++) {
 		animals[i].info(); 
 		}
-}}
-
-class Animal{
-	String kind;
-	String name;
-	int age;
-	void info() {
-	System.out.println("kind:" + kind);
-	System.out.println("name:" + name);
-	System.out.println("age:" + age);
-	}
-}
 //------------------------------------------------------------------------------------		
 System.out.println("------------------------------------------------------------------------------------");
-		
+
+class Bclass{
+	String name1;
+	//생성자 오버로딩 : 여러개의 생성자를 중복정의
+	Bclass() {}
+	Bclass(String name2){
+	System.out.println("Bclass의 매개변수 생성자");
+	name1=name2;
+	}
+}		
 		Bclass b1 = new Bclass ("가나다라마바사길동");		
-		System.out.println(b1.name);
+		System.out.println(b1.name1);
 		Bclass b = new Bclass();
 		System.out.println(b);
 		
-class Bclass{
-		String name1;
-		//생성자 오버로딩 : 여러개의 생성자를 중복정의
-		Bclass() {}
-		Bclass(String name2){
-		System.out.println("Bclass의 매개변수 생성자");
-		name1=name2;
-		}
-	}
-}
-}
 
 
+}}
 
 
