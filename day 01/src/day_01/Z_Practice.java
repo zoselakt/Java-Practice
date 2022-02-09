@@ -1,15 +1,27 @@
 package day_01;
 
-import java.util.Arrays;
+import java.util.Date;
 
 public class Z_Practice{
-	public static void main(String[] args) {
-		int a[] = {1,2,3,4,5} ;
-				
-		for(int b : a) {
-			System.out.print(b + " ");
+		
+		private int no;
+		private String name;
+		private boolean gender;
+		private String memo;
+		private Date writeDate;
+		
+		public Z_Practice() {
+			System.out.println("기본생성자가 실행됩니다.");
 		}
-		System.out.println(" ");
-		System.out.println(Arrays.toString(a));
-	}
+		public Z_Practice(String name, boolean gender, String memo) {
+			this.name = name;
+			this.gender = gender;
+			this.memo = memo;
+		}
+		@Override
+		public String toString() {
+			return name + "(" + (gender ? "남" : "여") + ")이 남긴말" + memo;
+		}
+
+	
 }

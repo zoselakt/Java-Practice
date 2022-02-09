@@ -11,14 +11,13 @@ public class Class_Casting_01 {
 		st1.info();
 		st1.Study();
 		// 업캐스팅
-	}	
 		Human h1 = new Student("나길동", 20, "롤하기", 3);
 		h1.info();
 //		h1.Study();  # 사용불가
 		// 다운캐스팅
 		Student s1=(Student)h1;
 		s1.Study();
-		
+	}
 }
 class Human{
 	String name;

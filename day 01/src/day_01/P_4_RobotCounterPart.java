@@ -16,7 +16,7 @@ import java.util.Scanner;
 √‚√≥: https://dyndy.tistory.com/102?category=637368 [DY N DY]
 */
  
-public class P_3_RobotCounterPart{
+public class P_4_RobotCounterPart{
 	
      
     static boolean[][] S = new boolean[110][110];
