@@ -8,6 +8,8 @@ public class H_Method_02 {
 		
 		// 메소드의 이름이 같아야 하며, 같은이름의 함수를 여러번 중복하여 정의가능
 		// 매개변수의 개수 또는 타입이 달라야 한다.
+		// 매개변수는 같고 리턴타입이 다른경우는 오버로딩이 성립되지 않는다.
+		
 			sum(10, 20);
 			sum(1.23, 3.12);
 			sum(10,20,30);
@@ -35,3 +37,21 @@ public class H_Method_02 {
 	static int mul(int x, int y) {return x*y;}
 	static int div(int x, int y) {return x/y;}
 }
+/*
+public int getAdd(int i, int j) {
+	return i+j;
+}
+
+public int getAdd(int i, int j, int k) { 갯수의 변화
+	return i+j+k;
+}
+	
+public double getAdd(double i, int j, int k) { 반환타입 변화
+	return (int) i+j+k;
+}
+
+public double getAdd(int i, double j, int k) { 반환타입 변화
+	return (double) i+j+k;
+}
+*/
+	

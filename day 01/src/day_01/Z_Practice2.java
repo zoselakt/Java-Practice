@@ -48,4 +48,8 @@ public class Z_Practice2{
 	System.out.println(strAr[2].charAt(0)); 
 
 	}
+	//return
+	public int getAdd (int i, int j) {
+		return i+j; // 파라미터에 있는 값을 바로 출력하지 않고 계속진행하고자 할때 return사용
+	}
 }
