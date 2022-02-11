@@ -1,5 +1,7 @@
 package day_01;
 
+import java.util.ArrayList;
+
 public class Z_Practice2{
 	public static void main(String[] args) {
 	char ch [][] = new char[3][];
@@ -24,7 +26,8 @@ public class Z_Practice2{
 		}
 		System.out.println();
 	}
-	
+//-------------------------------------------------------------------------------
+	System.out.println("--------------------------------------------------------");
 	
 	String [][] asia_nations = {
 			{"한국", "중국", "일본"}, {"태국","베트남","필리핀"}
@@ -46,10 +49,72 @@ public class Z_Practice2{
 	System.out.println(strAr[0].charAt(2)); 
 	System.out.println(strAr[1].charAt(1)); 
 	System.out.println(strAr[2].charAt(0)); 
-
-	}
+	//-------------------------------------------------------------------------------
+		System.out.println("--------------------------------------------------------");
+		
+	
 	//return
 	public int getAdd (int i, int j) {
 		return i+j; // 파라미터에 있는 값을 바로 출력하지 않고 계속진행하고자 할때 return사용
+	}
+//-------------------------------------------------------------------------------
+System.out.println("--------------------------------------------------------");
+	
+// 한번 선언한 배열은 프로그램에서 크기를 변경할 수 없다.
+int [] data = new int[10];
+
+/*
+<E> : 제네릭이라 부르며 ArrayList에 저장할 자료형을 반드시 클래스로 적는다.
+ArrayList에 저장할 자료가 기본 자료형이면 기본 자료형을 클래스화 시켜놓은 랩퍼 클래스를 사용한다.
+랩퍼클래스는 기본 자료형의 첫 문자만 대문자로 적으면되고 Character와 integer는 풀네임을사용한다.
+*/
+
+ArrayList<Z_Practice2> list = new ArrayList<>();
+
+list.add(new Z_Practice2("홍길동", 20)); // add(value): ArrayList에 Value를 맨뒤에 출력한다.
+System.out.println(list.size() + ":" + list);
+
+System.out.println(list.get(1)); //get(index) : ArrayList의 index번째 위치에 value를 얻어온다.
+
+list.set(2, new Z_Practice2("성춘향", 16));
+System.out.println(list.size()+ ":" + list);
+
+list.remove(2); //ArrayList의 index번째 위치에 value를 제거한다.
+list.clear(); // 모든데이터를 제거한다.
+
+
+public class Z_Practice2{
+	private String name;
+	private int age;
+	
+	public Z_Practice2() {
+		this("무명씨", 0);
+	}
+	public Z_Practice2(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Z_Practice2 [name=" + name + ", age=" + age + "]";
+	}
+}
+
+	
+	
+	
 	}
 }

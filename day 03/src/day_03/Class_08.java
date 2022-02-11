@@ -1,6 +1,6 @@
 package day_03;
 
-public class Class_044 {
+public class Class_08 {
 	public static void main(String[] args) {
 		// 익명클래스
 		// 익명클래스는 일회성이므로 객체를 다시 생성하고 호출하면 outerClass에 정의된 메서드가 호출

@@ -32,7 +32,7 @@ class Birth {
 	}
 }
 
-public class Class_055 {
+public class Class_09 {
 	public static void main(String[] args) {
 		
 		Birth day = new Birth();

@@ -11,7 +11,7 @@ public class Class_01 {
 		// class Car 밑 자료형+변수들은 멤버변수
 		// 같은 클래스를 사용하면 클래스명을 생략할 수있다.
 		
- 		// instance 변수: 
+ 		// instance 변수
 		// static 예약어가 붙지 않고 자료형 + 변수만으로 작성된 변수 
 		
 		// static변수(클래스변수) : 메모리저장 - 데이터영역

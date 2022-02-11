@@ -4,7 +4,7 @@ public class Class_02 {
 	public static void main(String[] args) {
 
 		/*
-		생성자(constructor) : Class1 class = new Class1();
+		생성자(constructor) : Class1 class = new Class1(); / new키워드 없어도 기본생성자는 만들어준다!
 		인스턴스 객체를 생성할떄 호출 / 생성자 이름은 해당 클래스명과 동일하게 설정
 		메소드와 비슷하나 생성자 앞에는 접근제어자(public)만 올수있다 (static X불가) 
 		반환타입이 없으므로 return이나 void를 붙일수 없다.  
@@ -25,6 +25,7 @@ public class Class_02 {
 // 생성된 인스턴스 스스로를 가리키는 예약어.
 // 같은 클래스내 같은 이름을 사용하는 지역 변수와 멤버변수가 있을 경우 지역변수에 우선권을 준다.
 // 그래서 this를 생략하게 되면 파라미터() 로 사용되는 변수로 인식한다.
+// static메소드에서는 사용할 수 없다.
 
 class Iphone{ 
 	String model; // 지역변수 초기화
