@@ -1,49 +1,21 @@
 package day_03;
 
-class Birth {
-	private int day;
-	private int month;
-	private int year;
-	
-	public int getDay() {
-		return day;
-	}
-	public void setDay(int day) {
-		if(month == 2) {
-			if(day <1 || day >28) {
-				System.out.println("날짜 오류");
-			}
-		}
-		else {
-			this.day = day;
-		}
-	}
-	public int getMonth() {
-		return month;
-	}
-	public void setMonth(int month) {
-		this.month = month;
-	}
-	public int getYear() {
-		return year;
-	}
-	public void setYear(int year) {
-		this.year = year;
-	}
-}
-
 public class Class_09 {
 	public static void main(String[] args) {
-		
-		Birth day = new Birth();
-		
-		day.setYear(2022);
-		day.setMonth(2);
-		day.setDay(30);
-		
-		
+		// 익명클래스
+		// 익명클래스는 일회성이므로 객체를 다시 생성하고 호출하면 outerClass에 정의된 메서드가 호출
+		// 인터페이스는 객체를 생성할수 없으므로 익명클래스를 사용하여 1회성으로 구현할 수 있다.
+		OuterClass1 o = new OuterClass1() {
+			void a() {
+				System.out.println("새롭게 정의된 익명클래스 메서드 입니다.");
+			}
+		};
+		o.a();
+		OuterClass1 ok=new OuterClass1();
+		ok.a();  // 익명클래스는 1회성
 }}
-	
-		
-	
-		
+
+class OuterClass1{
+	void a() {System.out.println("method a");}
+	void b() {}
+}

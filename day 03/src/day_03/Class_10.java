@@ -1,77 +1,53 @@
 package day_03;
 
+class Birth {
+	private int day;
+	private int month;
+	private int year;
+	
+	public int getDay() {
+		return day;
+	}
+	public void setDay(int day) {
+		if(month == 2) {
+			if(day <1 || day >28) {
+				System.out.println("날짜 오류");
+			}
+		}
+		else {
+			this.day = day;
+		}
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+}
+
 public class Class_10 {
-	// 참조 클래스 (Subject) 
-	// 참조클래스는 
-
-	int studentID;
-	String studentName;
-	Subject korea;
-	Subject math;
-	
-	public Class_10() {
-		korea = new Subject("국어");
-		math = new Subject("수학");
-	}
-	
-	public Class_10(int id, String name) {
-		studentID = id;
-		studentName= name;
+	public static void main(String[] args) {
 		
-		korea = new Subject("국어");
-		math = new Subject("수학");
-	}
-	
-	public void setKorea(int score) {
-		korea.setScore(score);
-	}
-	public void setMath(int score) {
-		math.setScore(score);
-	}
-	public void showStudentInfo() {
-		int total = korea.getScore() + math.getScore(); 
-		System.out.println(studentName + " 학생의 총점은 " + total + "점입니다.");
-	}
-
-public static void main(String[] args) {
-		// name
-	Class_10 James = new Class_10();
-	James.setKorea(70);
-	James.setMath(20);
+		Birth day = new Birth();
 		
-	Class_10 Tomas = new Class_10();
-	Tomas.setKorea(70);
-	Tomas.setMath(90);
+		day.setYear(2022);
+		day.setMonth(2);
+		day.setDay(30);
 		
-	James.showStudentInfo();
-	Tomas.showStudentInfo();
-}
-
-public class Subject {
-	String subjectName;
-	int score;
+		
+		
+		
+		
+		
+}}
 	
-	public Subject(String name) {
-		subjectName = name;
-	}
+		
 	
-	public void setSubjectName(String name) { 
-		subjectName = name;
-	}
-
-	public int getScore() {
-		return score;
-	}
-
-	public void setScore(int score) {
-		this.score = score;
-	}
-
-	public String getSubjectName() {
-		return subjectName;
-	}
-	
-}
-
-}
-
+		
