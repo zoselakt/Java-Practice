@@ -6,6 +6,7 @@ public class F_Continue_Break_01 {
 	public static void main(String[] args) {
 		// new 생성자
 		// 별도의 생성자를 만들지 않았을 때 컴파일러에 의해 자동으로 생성자가 만들어진다 이를 기본 생성자라 한다.
+		
 		// continue : 반복문을 계속수행하는데 특정조건에서는 수행하지 않고 건너뛰어야할때 사용
 		// break: 반복문을 사용하지않고 반복문을 빠져나올때 사용
 		

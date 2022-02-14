@@ -37,4 +37,6 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="day_01.Graphic"/>
+    <fullyQualifiedTypeName name="day_01.Ainterface"/>
 </qualifiedTypeNameHistroy>
