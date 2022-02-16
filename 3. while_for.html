@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>while / for </title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = 0;
+		//while
+		while(a< 10){
+		document.write("while Coding everybody <br/>");
+		a=a+1;
+		}
+		//for
+		for(var i=0; i<10; i=i+1 ) {
+			document.write("for Coding everybody <br/>");
+		}
+
+		// break / continue
+		for(var i=0; i<10; i++){
+			if(i===5){
+				break; // continue
+			}
+			document.write("for break Coding everybody<br/>");
+		}
+
+		// 중첩for
+		for(var i=1; i<10; i++){
+			document.write("<br/>" +i+ "단 <br/>");
+			for(var j=1; j<10; j++){
+				document.write(i+ "x" +j+ "=" + i*j + " / ");
+			}
+		}
+		
+		document.write("<br/> <br/>");
+
+		//for 100합계
+		var sum = 0;
+		for(var i=1; i<=100; i++){
+			sum += i;
+			document.write(sum + "  ");
+		}
+
+		// switch
+		let fruit = prompt("무슨 과일을 사고 싶나요?");
+
+		switch(fruit){ 
+			case '사과':
+				document.write("1000원입니다. <br/>");
+				break;
+			case '바나나':
+				document.write("1500원입니다. <br/>");
+				break;
+			case '멜론':
+				document.write("5000원입니다. <br/>");
+				break;
+			case '수박':
+				document.write("15000원입니다. <br/>");
+				break;
+		}
+	</script>
+</body>
+</html>
