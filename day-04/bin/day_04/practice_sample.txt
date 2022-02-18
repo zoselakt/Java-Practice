@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-hello
-hi
-=======
-hello
-hi
->>>>>>> 8999bce87c9d76d45fcf36eb9d488d788b0aa462
-third line
