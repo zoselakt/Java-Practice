@@ -66,6 +66,9 @@ int [] data = new int[10];
 //-------------------------------------------------------------------------------
 System.out.println("--------------------------------------------------------");
 
+
+
+
 /*
 <E> : 제네릭이라 부르며 ArrayList에 저장할 자료형을 반드시 클래스로 적는다.
 ArrayList에 저장할 자료가 기본 자료형이면 기본 자료형을 클래스화 시켜놓은 랩퍼 클래스를 사용한다.
@@ -86,7 +89,7 @@ list.remove(2); //ArrayList의 index번째 위치에 value를 제거한다.
 list.clear(); // 모든데이터를 제거한다.
 
 
-class Z_Practice2{
+public class Z_Practice2{
 	private String name;
 	private int age;
 	
@@ -116,33 +119,8 @@ class Z_Practice2{
 	}
 }
 
-//-------------------------------------------------------------------------------
-System.out.println("--------------------------------------------------------");
-
-// 리턴으로 두개의 값을 넘기는 방법! - 배열
-public static int[] testMethod() {
-	int num1 = 100;
-	int num2 = 200;	
-	return new int[] {num1, num2};
-}
-	int result[] = testMethod();
 	
-	System.out.println(result[0]);
 	
-//-------------------------------------------------------------------------------
-System.out.println("--------------------------------------------------------");
-// <String>으로 형변환하여 출력문에서 String으로 형 변환 할 필요없다! / 제네릭!!
-ArrayList<String> al = new ArrayList<String>(); 
-al.add("사과");
-al.add("배");
-al.add("수박");
-
-for(int i=0; i<al.size(); i++) {
-	String str = al.get(i);
 	
-	System.out.println(str);
 	}
-//-------------------------------------------------------------------------------
-System.out.println("--------------------------------------------------------");
-
-}}
+}

@@ -1,3 +1,0 @@
-IO package 파일복사 연습
-
-practice.txt → fileTarget.txt
