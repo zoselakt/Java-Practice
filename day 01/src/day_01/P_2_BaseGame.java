@@ -43,7 +43,7 @@ public class P_2_BaseGame {
 		int s=0, b=0;
 		for(int i=0; i<level; i++) {
 			//스트라이크
-			if(ball[i] == user.charAt(i) - 48) { //아스키코드관계로 -48 또는 '0' 입력
+			if(ball[i] == user.charAt(i) - 48) { //아스키코드관계로 - 48 또는 '0' 입력
 				s++;
 			}
 //			indexOf() : 문자열에서 괄호 안의 문자나 문자열이 최초로 나타나는 위치를 얻어온다. 값이 없으면 -1을 리턴한다.
@@ -55,7 +55,7 @@ public class P_2_BaseGame {
 		if(s == level) {
 			break;
 		}
-		System.out.println(s + "스트라이크" + (b -s) + "볼");
+		System.out.println(s + "스트라이크" + (b-s) + "볼");
 		}
 		long end = System.currentTimeMillis(); // 게임종료시간
 		System.out.println((end - start) /1000. +"초"+ " " + count + "번에 맞췄다!");

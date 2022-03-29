@@ -1,31 +1,71 @@
 package day_06;
 
-public class Thread_03 {
-	public static void main(String[] args) {
-		// 스레드의 라이프사이클
-		// new : 스레드가 인스턴스화 된 상태
-		// Runnable : 실행할 수있는 상태로 대기하게되며 스케줄러에 의해 선택되면 run()메서드를 바로 수행
-		// Blocked : sleep, join메서드를 호출하게 되면, 스케쥴러에 의해서 선택받을 수 없다.
-		// Dead : 할당받은 메모리와 정보 모두 삭제된다.
-		SleepThread	t= new SleepThread();
-		t.start();
+class MyThread8 implements Runnable {
+	@Override
+	public void run() {
+		for(int i=0; i<10; i++) {
+			System.out.println("t3:" +i);
+		}
+		System.out.println("<<t1완료>>");
+	}
+}
+class MyThread9 implements Runnable {
+	@Override
+	public void run() {
+		for(int i=0; i<10; i++) {
+			System.out.println("t4:" +i);
+		}
+		System.out.println("<<t4완료>>");
 	}
 }
 
-class SleepThread extends Thread{
-	public void run() {
-		System.out.println("카운트 다운 5초");
-		for(int i=5; i>=0; i--) {
-			System.out.println(i);
-			if(i!=0) {
-				try {
-					Thread.sleep(1000);
-				}
-				catch(InterruptedException ie) {
-					System.err.println(ie.toString());
-				}
-			}
+// 메인
+public class Thread_03 {
+	public static void main(String[] args) {
+		// join : 특정한 스레드가 작업을 먼저수행할때 사용
+		
+		MyThread8 s3 = new MyThread8();
+		MyThread9 s4 = new MyThread9();
+		Thread t3=new Thread(s3);
+		Thread t4=new Thread(s4);
+		t3.start();
+		try {
+			t3.join();
+		}catch(InterruptedException ie) {System.out.println(ie.toString()); }
+		t4.start();
+		try {
+			t4.join();
+		}catch(InterruptedException ie) {System.out.println(ie.toString()); }
+		
+	for(int i =0; i<10; i++) {
+		System.out.println("메인스레드:" +i);
 		}
-		System.out.println("종료");
+//-------------------------------------------------------------------------------
+System.out.println("--------------------------------------------------------");		
+	// yield() : 자신의 시간을 양보하는 메서드 
+	//           스래드가 작업중 yield를 만나면 자신에게 할당된 시간을 다음차례에 양도
+	
+	MyThread6 s1= new MyThread6();
+	MyThread7 s2= new MyThread7();
+	Thread t1=new Thread(s1);
+	Thread t2=new Thread(s2);
+	
+	t1.start();
+	t2.start();
+	
 	}
-}
+} //메인종료
+
+class MyThread6 implements Runnable{
+	@Override
+	public void run() {
+		for(int i=0; i<30; i++) {
+			System.out.print("★");
+			Thread.yield();
+		}}}
+class MyThread7 implements Runnable{
+	@Override
+	public void run() {
+		for(int i=0; i<30; i++) {
+			System.out.print("☆");
+		}}}

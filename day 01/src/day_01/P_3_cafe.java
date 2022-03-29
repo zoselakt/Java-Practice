@@ -16,9 +16,9 @@ public class P_3_cafe {
 		// 1. 결재해야할 총 금액 출력 /2. 지불할 금액을 입력받는다. /3. 지불할 금액과 총금액을 비교계산한다.
 		// 4. 계산이 완료되었으면 총 금액은0원으로 주문리스트는 비워준다./5. 전체 갯수를 초기화한다.
 		
-		int count = 0; // 주문갯수
-		String OrderList[]=new String[5]; //주문은 5개까지 가능 
-		int total =0; //총 금액
+		int count = 0; // 전체갯수 저장할 변수
+		String OrderList[] = new String[5]; // 주문한 메뉴를 저장할 문자열 배열
+		int total = 0; //총금액 저장할 변수
 		
 		while(true) {
 			System.out.println("§ ☆★☆★☆★ ＠Cafe＠ ☆★☆★☆★ §");
@@ -28,14 +28,16 @@ public class P_3_cafe {
 			System.out.println("4. 끝내기");
 			System.out.print("입력:");
 			int num= sc.nextInt();
+			
 			if(num==1) {
-				String menuName;
-				int menuPrice;
+				String menuName; // 주문할 내용
+				int menuPrice; // 주문가격
 				System.out.println("1. 아메리카노 /t 3800원");
 				System.out.println("2. 카페모카 /t 4200원");
 				System.out.println("3. 카페라떼 /t 4200원");
 				System.out.println("4. 카라멜마끼아또 /t 4500원");
 				System.out.print("주문할 메뉴번호:");
+				
 				int menuNum = sc.nextInt();
 				if(menuNum==1) {
 					menuName="아메리카노";
@@ -57,25 +59,29 @@ public class P_3_cafe {
 					System.out.println("잘못입력하셨습니다.");
 					continue;
 				}
-				total += menuPrice;
-				OrderList[count] = menuName; // 주문 수량 
-				count++;
+				total += menuPrice; // 주문한 메뉴의 가격을 총 금액에 누적한다.
+				OrderList[count] = menuName; // 주문한 메뉴를 리스트에 추가한다.
+				count++; // 주문한 메뉴를 한개추가한다.
 				System.out.println("주문한 메뉴:" + menuName +"가격:"+menuPrice+"입니다.");
 			}
 			else if(num==2) { // 취소하기 목록메뉴 
 				
 				System.out.println("주문 목록"); // 목록
-				for(int i=0; i<count; i++) {
-					System.out.println(i+ 1+ "," +OrderList[i]);;
+				for(int i=0; i<count; i++) { // 주문한 메뉴 리스트 / 0부터 count로 위에서 주문한 것까지
+					System.out.println(i+1+ ". " +OrderList[i]); // 주문한 내용중 몇번째를 삭제할것인지.
 				}
-				System.out.println("취소할 메뉴 번호:"); // 주문취소
+				
+				System.out.println("취소할 메뉴 번호: "); // 주문취소
 				int cancelNum = sc.nextInt();
-				if(1<=cancelNum && cancelNum <=count) {
+				
+				if(1<=cancelNum && cancelNum <=count) { // 입력받은 메뉴를 주문리스트에서 삭제 / 1부터count사이값
 					String delMenu = OrderList[cancelNum - 1];
 					System.out.println(delMenu + "메뉴삭제!");
-					for(int i=cancelNum-1; i<count; i++) {
+					
+					for(int i=cancelNum-1; i<count; i++) { // 4를 입력하면 5번째가 삭제되기 때문에 -1를 해준다.
 						OrderList[i] =OrderList[i+1]; 
 					}
+					
 					if(delMenu.equals("아메리카노")) {
 						total-=3800;
 					}

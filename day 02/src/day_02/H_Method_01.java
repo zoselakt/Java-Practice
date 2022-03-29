@@ -38,5 +38,8 @@ public class H_Method_01 {
 		System.out.println("< 계산을 시작합니다.>");
 		int area= a*b;
 		return area;
+		
 	}
 }
+
+

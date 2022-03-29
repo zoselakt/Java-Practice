@@ -8,10 +8,6 @@ public class API_01 {
 	// java.util: 프로그램을 제어하기 위한 클래스와 데이터를 효율적으로 저장하기 위한 클래스들을 담고 있다.
 	// java.io: 키보드, 모니터, 프린터,파일 등을 제어할 수 있는 클래스들의 모음
 	// java.net: 통신을 위한 기능들을 담고있다.
-
-	// object 클래스  
-	// clone() / equals() / finalize() / getClass() / hashcode() / notify() 
-	// notufiAll() / toString() / wait() / wait(longtimeout) / wait(longtimeout, int nanos)
 		
 	// 문자열 클래스 종류
 	// String클래스 
@@ -48,6 +44,31 @@ public class API_01 {
 		System.out.println(dd);
 		System.out.println(ff);
 		System.out.println(cc);
+		
+		// Wrapper 클래스 생성자
+		Integer aa = new Integer(100);
+		Integer aa1 = new Integer("100");
+		
+		System.out.println(aa.equals(aa1)); //true
+		
+		// 여러가지 Wrapper클래스 활용
+		// toString
+		System.out.println(aa.toString()); //100
+		System.out.println("aa.toString()="+aa);
+		
+		// parseInt
+		String str = "100";
+		int in = Integer.parseInt(str);
+		System.out.println(in); // 100
+		
+		// toBinaryString
+		String str2 = Integer.toBinaryString(200);
+		System.out.println(str2); //11001000
+		
+		// intValue : Integer객체를 기본형인 int형으로 바꿈
+		Integer intg = new Integer(150);
+		int intg1 = intg.intValue();		
+		System.out.println(intg1); // 150
 		
 		// Random 클래스 : 무작위값을 얻고 싶을때 사용
 		// Random 객체명 = new Random();

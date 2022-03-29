@@ -1,0 +1,9 @@
+abcde
+ABCDE
+
+dataInputStream / OutputStream
+
+100
+10.0
+
+true

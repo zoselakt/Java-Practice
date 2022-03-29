@@ -1,38 +1,66 @@
 package day_06;
 
 public class Thread_05 {
-
 	public static void main(String[] args) {
-		// join : 특정한 스레드가 작업을 먼저수행할때 사용
-		MyThread8 s1 = new MyThread8();
-		MyThread9 s2 = new MyThread9();
-		Thread t1=new Thread(s1);
-		Thread t2=new Thread(s2);
-		t1.start();
-		try {
-			t1.join();
-		}catch(InterruptedException ie) {System.out.println(ie.toString()); }
-		t2.start();
-		try {
-			t2.join();
-		}catch(InterruptedException ie) {System.out.println(ie.toString()); }
+		// wait / notify
 		
-	for(int i =0; i<10; i++) {
-		System.out.println("메인스레드:" +i);
-}}}
-class MyThread8 implements Runnable {
-	@Override
+		// 메서드
+		// void wait()- 호출될때 까지 대기 / void wait(long timeout)- timeout시간만큼 대기 
+		// notify()- 대기중인 한 스레드만 깨움 / notifyAll()- 모든 스레드를 깨움
+		
+			Account account = new Account();
+			Son son = new Son(account);
+			Mom mom = new Mom(account);
+			son.start();
+			mom.start();
+//메인
+}}	
+class Account{
+	int money=0;
+	
+	public int showMoney() {
+		return money;
+}
+	public synchronized void setMoney() {
+		try {
+			Thread.sleep(1000);
+			}catch(InterruptedException ie) {System.out.println(ie.toString()); }
+		this.money+=2000;
+		System.out.println("용돈 입금했습니다. 현재잔액:" + this.showMoney());
+		this.notify(); // 대기중인 스레드 깨우기
+}
+	public synchronized void getMoney() {
+		while(money<=0) {
+			try {
+				System.out.println("잔고 없음");
+				this.wait(); // 호출될때 까지 대기
+			}catch(InterruptedException i) {}
+		}
+		this.money-=2000;
+		System.out.println("용돈 출금했습니다. 현재잔액:"+this.showMoney());
+	}  
+}
+
+class Son extends Thread{
+	private Account account;
+	Son(Account account){
+		this.account=account;
+	}
 	public void run() {
 		for(int i=0; i<10; i++) {
-			System.out.println("t1:" +i);
-		}
-		System.out.println("<<t1완료>>");
-	}}
-class MyThread9 implements Runnable {
-	@Override
+			account.getMoney();
+			}  
+	}  
+}
+
+class Mom extends Thread{
+	private Account account;
+	Mom(Account account) {
+		this.account=account;
+	}
 	public void run() {
 		for(int i=0; i<10; i++) {
-			System.out.println("t2:" +i);
-		}
-		System.out.println("<<t2완료>>");
-	}}
+			account.setMoney();
+			}  
+	}  
+}
