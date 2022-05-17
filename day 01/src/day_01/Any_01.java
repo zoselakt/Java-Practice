@@ -1,8 +1,8 @@
 package day_01;
 
 /*
- * ³¯Â¥ : 2022. 02. 11.
- * ³»¿ë : ¸ðµç³»¿ë
+ * ë‚ ì§œ : 2022. 02. 11.
+ * ë‚´ìš© : ëª¨ë“ ë‚´ìš©
  * 
  * */
 
@@ -10,207 +10,205 @@ public class Any_01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	}}
-// Å¬·¡½º
+// í´ëž˜ìŠ¤
 //
-// Á¢±ÙÁ¦ÇÑÀÚ Å¬·¡½º¼±¾ð Any_01(Å¬·¡½º¸í) {
-//	Á¢±ÙÁ¦ÇÑÀÚ static ¹ÝÈ¯Å¸ÀÔ (¸ÞÀÎ)¸Þ¼­µå(ÆÄ¶ó¹ÌÅÍ = (¹®ÀÚ¿­ [¹è¿­] º¯¼ö¸í) {
+// ì ‘ê·¼ì œí•œìž í´ëž˜ìŠ¤ì„ ì–¸ Any_01(í´ëž˜ìŠ¤ëª…) {
+//	ì ‘ê·¼ì œí•œìž static ë°˜í™˜íƒ€ìž… (ë©”ì¸)ë©”ì„œë“œ(íŒŒë¼ë¯¸í„° = (ë¬¸ìžì—´ [ë°°ì—´] ë³€ìˆ˜ëª…) {
 // }}
 
-//1. Á¢±ÙÁ¦ÇÑÀÚ : public, private, protected, default
-//			   public : ¾î¶² Å¬·¡½º¿¡¼­µµ Á¢±ÙÀÌ °¡´ÉÇÒ ¼öÀÖµµ·Ï ¿­¾î ³õ´Â´Ù´Â ÀÇ¹Ì.
-//			   public¸Þ¼Òµå¸¦ ÅëÇØ private ¸â¹ö¿¡ Á¢±ÙÇÒ ¼ö ÀÖ´Ù. public°ú private»çÀÌ ÀÎÅÍÆäÀÌ½º ¿ªÇÒÀ» ¼öÇàÇÏ±âµµ ÇÔ.
-//2. ÆÄ¶ó¹ÌÅÍ : ¸Þ¼­µå(ÇÔ¼ö) È£Ãâ½Ã ÆÄ¶ó¹ÌÅÍ °ªÀ» ³Ö¾î¼­ È£ÃâÇÒ ¼ö ÀÖÀ½. / String °ªÀ¸·Î[]¾È¿¡ ÀÎ¼öµé°ªÀ» ¹Þ´Â´Ù.
-//			 args´Â argument·Î ÄÄÇ»ÅÍ ÂÊ ¿ë¾î·Î ÀÎ¼ö, µ¶¸³º¯¼öÀÇ ¶æÀ» °¡Áö°í ÀÖÀ½. 
-//3. ¹ÝÈ¯Å¸ÀÔ(¸®ÅÏÅ¸ÀÔ) : ¹ÝÈ¯ÇÒ °ªÀÌ ÀÖ´Ù ¾ø´Ù ¡æ ¾øÀ¸¸é void / Æ¯º°ÇÑ ¹ÝÈ¯°ªÀÌ ¾øÀÌ ÀÛµ¿¸¸ ¼öÇà½ÃÅ°±âÀ§ÇÏ¿© »ç¿ë
-//4. static: static ¼±¾ðµÈ ÇÔ¼ö(¸Þ¼­µå)³ª º¯¼ö´Â ÀÎ½ºÅÏ½º °´Ã¼ÀÇ »ý¼º¾øÀÌ È£ÃâÀ» ÇÒ ¼ö ÀÖ´Ù.
-//			°¢ ¸â¹öº¯¼ö´Â °¢ÀÚÀÇ ÀúÀå°ø°£À»°¡ÁöÁö¸¸ staticº¯¼ö´Â °øÀ¯ÇÏ±â À§ÇØ¼­ »ç¿ëÇÑ´Ù.
-// 			 Å¬·¡½º (¸Þ¼­µå) : °øÀå / ÀÎ½ºÅÏ½º(°´Ã¼) : °´Ã¼ / 
-//			 staticÀ¸·Î ÁöÁ¤µÈ ¸Þ¼­µå°¡ ¿©·¯°³ÀÎ °æ¿ì °´Ã¼¸¦ »ý¼ºÇÏ´Â °Í°ú »ó°ü¾øÀÌ ¸ðµÎ ¸Þ¸ð¸®¿¡ ÇÒ´ç½ÃÅ²´Ù.
-//			 ±× ÈÄ, main À¸·Î ¸¸µé¾îÁø ¸Þ¼­µå¸¦ Ã£¾Æ¼­ ±× ¸Þ¼­µå¸¦ °¡Àå¸ÕÀú È£ÃâÇÑ´Ù.
-//			 ÃÖÃÊ¿¡ ÇÑ¹ø¸¸ »ý¼ºµÇ°í ¸ðµç °´Ã¼¿¡¼­ °øÀ¯ÇØ¼­»ç¿ëÇÑ´Ù.
-//5. void : returnµÇ´Â Å¸ÀÔÀÌ ¾øÀ½À» ÀÇ¹Ì / ¾Æ¹«°Íµµ ¸®ÅÏÇÏÁö ¾ÊÀ½À» ¼±¾ðÇØÁÖ´Â °Í°ú °°´Ù.
-//			void¸¦ ¼±¾ðÇÑ ÈÄ °ªÀ» »©³»Áö¾Ê°í °á°ú°ªÀ» ¾ò°íÀÚÇÒ¶§ ¼±¾ðÇÏ°í void¹® ¹Û¿¡¼­ °á°ú°ªÀ» ¾ò°íÀÚÇÒ¶§´Â 
-//			ÀÚ·áÇü(int, string)À» »ç¿ëÇÑ´Ù. 
+//1. ì ‘ê·¼ì œí•œìž : public, private, protected, default
+//			   public : ì–´ë–¤ í´ëž˜ìŠ¤ì—ì„œë„ ì ‘ê·¼ì´ ê°€ëŠ¥í•  ìˆ˜ìžˆë„ë¡ ì—´ì–´ ë†“ëŠ”ë‹¤ëŠ” ì˜ë¯¸.
+//			   publicë©”ì†Œë“œë¥¼ í†µí•´ private ë©¤ë²„ì— ì ‘ê·¼í•  ìˆ˜ ìžˆë‹¤. publicê³¼ privateì‚¬ì´ ì¸í„°íŽ˜ì´ìŠ¤ ì—­í• ì„ ìˆ˜í–‰í•˜ê¸°ë„ í•¨.
+//2. íŒŒë¼ë¯¸í„° : ë©”ì„œë“œ(í•¨ìˆ˜) í˜¸ì¶œì‹œ íŒŒë¼ë¯¸í„° ê°’ì„ ë„£ì–´ì„œ í˜¸ì¶œí•  ìˆ˜ ìžˆìŒ. / String ê°’ìœ¼ë¡œ[]ì•ˆì— ì¸ìˆ˜ë“¤ê°’ì„ ë°›ëŠ”ë‹¤.
+//			 argsëŠ” argumentë¡œ ì»´í“¨í„° ìª½ ìš©ì–´ë¡œ ì¸ìˆ˜, ë…ë¦½ë³€ìˆ˜ì˜ ëœ»ì„ ê°€ì§€ê³  ìžˆìŒ. 
+//3. ë°˜í™˜íƒ€ìž…(ë¦¬í„´íƒ€ìž…) : ë°˜í™˜í•  ê°’ì´ ìžˆë‹¤ ì—†ë‹¤ â†’ ì—†ìœ¼ë©´ void / íŠ¹ë³„í•œ ë°˜í™˜ê°’ì´ ì—†ì´ ìž‘ë™ë§Œ ìˆ˜í–‰ì‹œí‚¤ê¸°ìœ„í•˜ì—¬ ì‚¬ìš©
+//4. static: static ì„ ì–¸ëœ í•¨ìˆ˜(ë©”ì„œë“œ)ë‚˜ ë³€ìˆ˜ëŠ” ì¸ìŠ¤í„´ìŠ¤ ê°ì²´ì˜ ìƒì„±ì—†ì´ í˜¸ì¶œì„ í•  ìˆ˜ ìžˆë‹¤.
+//			ê° ë©¤ë²„ë³€ìˆ˜ëŠ” ê°ìžì˜ ì €ìž¥ê³µê°„ì„ê°€ì§€ì§€ë§Œ staticë³€ìˆ˜ëŠ” ê³µìœ í•˜ê¸° ìœ„í•´ì„œ ì‚¬ìš©í•œë‹¤.
+// 			 í´ëž˜ìŠ¤ (ë©”ì„œë“œ) : ê³µìž¥ / ì¸ìŠ¤í„´ìŠ¤(ê°ì²´) : ê°ì²´ / 
+//			 staticìœ¼ë¡œ ì§€ì •ëœ ë©”ì„œë“œê°€ ì—¬ëŸ¬ê°œì¸ ê²½ìš° ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ” ê²ƒê³¼ ìƒê´€ì—†ì´ ëª¨ë‘ ë©”ëª¨ë¦¬ì— í• ë‹¹ì‹œí‚¨ë‹¤.
+//			 ê·¸ í›„, main ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ë©”ì„œë“œë¥¼ ì°¾ì•„ì„œ ê·¸ ë©”ì„œë“œë¥¼ ê°€ìž¥ë¨¼ì € í˜¸ì¶œí•œë‹¤.
+//			 ìµœì´ˆì— í•œë²ˆë§Œ ìƒì„±ë˜ê³  ëª¨ë“  ê°ì²´ì—ì„œ ê³µìœ í•´ì„œì‚¬ìš©í•œë‹¤.
+//5. void : returnë˜ëŠ” íƒ€ìž…ì´ ì—†ìŒì„ ì˜ë¯¸ / ì•„ë¬´ê²ƒë„ ë¦¬í„´í•˜ì§€ ì•ŠìŒì„ ì„ ì–¸í•´ì£¼ëŠ” ê²ƒê³¼ ê°™ë‹¤.
+//			voidë¥¼ ì„ ì–¸í•œ í›„ ê°’ì„ ë¹¼ë‚´ì§€ì•Šê³  ê²°ê³¼ê°’ì„ ì–»ê³ ìží• ë•Œ ì„ ì–¸í•˜ê³  voidë¬¸ ë°–ì—ì„œ ê²°ê³¼ê°’ì„ ì–»ê³ ìží• ë•ŒëŠ” 
+//			ìžë£Œí˜•(int, string)ì„ ì‚¬ìš©í•œë‹¤. 
 
 //------------------------------------------------------------------------------------
-// °´Ã¼ : ÇÁ·Î±×·¥ÀÇ ´ë»ó, »ý¼ºµÈ ÀÎ½ºÅÏ½º
-// Å¬·¡½º: °´Ã¼¸¦ ÄÚµå·Î ¸¸µç»óÅÂ
-// ÀÎ½ºÅÏ½º: Å¬·¡½º°¡ ¸Þ¸ð¸®¿¡ »ý¼ºµÈ »óÅÂ
-// ¸â¹öº¯¼ö: Å¬·¡½ºÀÇ ¼Ó¼º, Æ¯¼º
-// ¸Þ¼­µå: ¸â¹öº¯¼ö¸¦ ÀÌ¿ëÇÏ¿© Æ¯Á¤ÇÑ µ¿ÀÛÀÌ³ª ÀÛ¾÷, Å¬·¡½ºÀÇ ±â´ÉÀ» ±¸ÇöÇÏ´Â°Í
-// ÂüÁ¶º¯¼ö: ¸Þ¸ð¸®¿¡ »ý¼ºµÈ ÀÎ½ºÅÏ½º¸¦ °¡¸®Å°´Â º¯¼ö
-// ÂüÁ¶ °ª: »ý¼ºµÈ ÀÎ½ºÅÏ½ºÀÇ ¸Þ¸ð¸® ÁÖ¼Ò°ª
+// ê°ì²´ : í”„ë¡œê·¸ëž¨ì˜ ëŒ€ìƒ, ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤
+// í´ëž˜ìŠ¤: ê°ì²´ë¥¼ ì½”ë“œë¡œ ë§Œë“ ìƒíƒœ
+// ì¸ìŠ¤í„´ìŠ¤: í´ëž˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ìƒì„±ëœ ìƒíƒœ
+// ë©¤ë²„ë³€ìˆ˜: í´ëž˜ìŠ¤ì˜ ì†ì„±, íŠ¹ì„±
+// ë©”ì„œë“œ: ë©¤ë²„ë³€ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ íŠ¹ì •í•œ ë™ìž‘ì´ë‚˜ ìž‘ì—…, í´ëž˜ìŠ¤ì˜ ê¸°ëŠ¥ì„ êµ¬í˜„í•˜ëŠ”ê²ƒ
+// ì°¸ì¡°ë³€ìˆ˜: ë©”ëª¨ë¦¬ì— ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜
+// ì°¸ì¡° ê°’: ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ ë©”ëª¨ë¦¬ ì£¼ì†Œê°’
 //------------------------------------------------------------------------------------
 /*
-Á¢±Ù±ÇÇÑ ÁöÁ¤ÀÚ
-private: °°Àº Å¬·¡½º ³»¿¡¼­¸¸ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù. / »ó¼Ó ºÒ°¡´É
-default(package): ÇöÀç ÆÐÅ°Áö¿¡¼­´Â publicÃ³·³ »ç¿ëµÇ°í ´Ù¸¥ÆÐÅ°Áö¿¡¼­´Â privateÃ³·³ »ç¿ëµÈ´Ù. 
-				  »ó¼Ó°¡´É Á¢±Ù±ÇÇÑÀ» »ý·«ÇÏ¸é package°¡ µÈ´Ù.
-protected: ÇöÀçÅ¬·¡½º¿Í ÇöÀç Å¬·¡½º¸¦ »ó¼Ó¹ÞÀº ÀÚ½ÄÅ¬·¡½º¸¸ Á¢±Ù°¡´É, »ó¼Ó °¡´É
-public: ¾Æ¹«°÷¿¡¼­³ª ÀÚÀ¯·Ó°Ô »ç¿ëÇÒ ¼ö ÀÖ´Ù. »ó¼Ó°¡´É 
+ì ‘ê·¼ê¶Œí•œ ì§€ì •ìž
+private: ê°™ì€ í´ëž˜ìŠ¤ ë‚´ì—ì„œë§Œ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤. / ìƒì† ë¶ˆê°€ëŠ¥
+default(package): í˜„ìž¬ íŒ¨í‚¤ì§€ì—ì„œëŠ” publicì²˜ëŸ¼ ì‚¬ìš©ë˜ê³  ë‹¤ë¥¸íŒ¨í‚¤ì§€ì—ì„œëŠ” privateì²˜ëŸ¼ ì‚¬ìš©ëœë‹¤. 
+				  ìƒì†ê°€ëŠ¥ ì ‘ê·¼ê¶Œí•œì„ ìƒëžµí•˜ë©´ packageê°€ ëœë‹¤.
+protected: í˜„ìž¬í´ëž˜ìŠ¤ì™€ í˜„ìž¬ í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ ìžì‹í´ëž˜ìŠ¤ë§Œ ì ‘ê·¼ê°€ëŠ¥, ìƒì† ê°€ëŠ¥
+public: ì•„ë¬´ê³³ì—ì„œë‚˜ ìžìœ ë¡­ê²Œ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤. ìƒì†ê°€ëŠ¥ 
 
-protected, private´Â Å¬·¡½º ¾Õ¿¡ ¸ø¾´´Ù. ´Ü ³»ºÎÅ¬·¡½º(Inner) ¾Õ¿¡´Â °¡´É
+protected, privateëŠ” í´ëž˜ìŠ¤ ì•žì— ëª»ì“´ë‹¤. ë‹¨ ë‚´ë¶€í´ëž˜ìŠ¤(Inner) ì•žì—ëŠ” ê°€ëŠ¥
  */
 //------------------------------------------------------------------------------------
 /*
-»ý¼ºÀÚ(constructor) : Class1 class = new Class1();
-ÀÎ½ºÅÏ½º °´Ã¼¸¦ »ý¼ºÇÒ‹š È£Ãâ / »ý¼ºÀÚ ÀÌ¸§Àº ÇØ´ç Å¬·¡½º¸í°ú µ¿ÀÏÇÏ°Ô ¼³Á¤
-¸Þ¼Òµå¿Í ºñ½ÁÇÏ³ª »ý¼ºÀÚ ¾Õ¿¡´Â Á¢±ÙÁ¦¾îÀÚ(public)¸¸ ¿Ã¼öÀÖ´Ù (static XºÒ°¡) 
-¹ÝÈ¯Å¸ÀÔÀÌ ¾øÀ¸¹Ç·Î returnÀÌ³ª void¸¦ ºÙÀÏ¼ö ¾ø´Ù.  
-»ý¼ºÀÚ¸¦ ¼±¾ðÇÏÁö ¾ÊÀ¸¸é ±âº»»ý¼ºÀÚ¸¦ ±âº»À¸·Î ¸¸µé¾îÁØ´Ù. ÇÏÁö¸¸ »ý¼ºÀÚ ¼±¾ðÇÏ¸é ÀÚµ¿À¸·Î »ý¼ºµÇÁö ¾Ê´Â´Ù.
-°´Ã¼°¡ »ý¼ºµÉ¶§ ÀÚµ¿À¸·Î ½ÇÇàµÇ¸ç ¸â¹öº¯¼ö¸¦ ÃÊ±âÈ­ÇÒ¶§ »ç¿ëÇÑ´Ù. (¸â¹öº¯¼ö¸¦ ÃÊ±âÈ­ÇÒ ¸ñÀûÀ¸·Î »ç¿ë)
+ìƒì„±ìž(constructor) : Class1 class = new Class1();
+ì¸ìŠ¤í„´ìŠ¤ ê°ì²´ë¥¼ ìƒì„±í• Â‹Âš í˜¸ì¶œ / ìƒì„±ìž ì´ë¦„ì€ í•´ë‹¹ í´ëž˜ìŠ¤ëª…ê³¼ ë™ì¼í•˜ê²Œ ì„¤ì •
+ë©”ì†Œë“œì™€ ë¹„ìŠ·í•˜ë‚˜ ìƒì„±ìž ì•žì—ëŠ” ì ‘ê·¼ì œì–´ìž(public)ë§Œ ì˜¬ìˆ˜ìžˆë‹¤ (static Xë¶ˆê°€) 
+ë°˜í™˜íƒ€ìž…ì´ ì—†ìœ¼ë¯€ë¡œ returnì´ë‚˜ voidë¥¼ ë¶™ì¼ìˆ˜ ì—†ë‹¤.  
+ìƒì„±ìžë¥¼ ì„ ì–¸í•˜ì§€ ì•Šìœ¼ë©´ ê¸°ë³¸ìƒì„±ìžë¥¼ ê¸°ë³¸ìœ¼ë¡œ ë§Œë“¤ì–´ì¤€ë‹¤. í•˜ì§€ë§Œ ìƒì„±ìž ì„ ì–¸í•˜ë©´ ìžë™ìœ¼ë¡œ ìƒì„±ë˜ì§€ ì•ŠëŠ”ë‹¤.
+ê°ì²´ê°€ ìƒì„±ë ë•Œ ìžë™ìœ¼ë¡œ ì‹¤í–‰ë˜ë©° ë©¤ë²„ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”í• ë•Œ ì‚¬ìš©í•œë‹¤. (ë©¤ë²„ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”í•  ëª©ì ìœ¼ë¡œ ì‚¬ìš©)
 
-±âº»»ý¼ºÀÚ : ±¸ÇöºÎ - Å¬·¡½º¸í() {} / È£ÃâºÎ - new Å¬·¡½º¸í();
-¸Å°³º¯¼ö»ý¼ºÀÚ : ±¸ÇöºÎ - Å¬·¡½º¸í(ÀÚ·áÇü º¯¼ö¸í...) {} / È£ÃâºÎ - new Å¬·¡½º¸í(°ª);
+ê¸°ë³¸ìƒì„±ìž : êµ¬í˜„ë¶€ - í´ëž˜ìŠ¤ëª…() {} / í˜¸ì¶œë¶€ - new í´ëž˜ìŠ¤ëª…();
+ë§¤ê°œë³€ìˆ˜ìƒì„±ìž : êµ¬í˜„ë¶€ - í´ëž˜ìŠ¤ëª…(ìžë£Œí˜• ë³€ìˆ˜ëª…...) {} / í˜¸ì¶œë¶€ - new í´ëž˜ìŠ¤ëª…(ê°’);
 
-¸Þ¼­µå È£Ãâ½Ã static´ë½Å »ý¼ºÀÚ¸¦ »ý¼ºÈÄ ¸Þ¼­µåÈ£ÃâÇÏ¿© »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+ë©”ì„œë“œ í˜¸ì¶œì‹œ staticëŒ€ì‹  ìƒì„±ìžë¥¼ ìƒì„±í›„ ë©”ì„œë“œí˜¸ì¶œí•˜ì—¬ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.
 */ 
 //------------------------------------------------------------------------------------
-// VO(value object) Å¬·¡½º: Ã³¸®ÇÒ µ¥ÀÌÅÍ ÇÑ °Ç°ú µ¥ÀÌÅÍ¸¦ Ã³¸®ÇÏ´Â ¸Þ¼ÒµåÀ» ±â¾ïÇÏ´Â Å¬·¡½º DTO(data trasfer object)
-// bean : µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¸â¹öº¯¼ö(ÇÊµå)¿Í ¸â¹ö º¯¼ö¿¡ µ¥ÀÌÅÍ¸¦ ÀÔÃâ·ÂÇÒ ¼öÀÖ´Â getter & setter ¸Þ¼Òµå·Î¸¸ ±¸¼ºµÈ Å¬·¡½º
-// ÃÊ±âÈ­ÇÏÁö ¾ÊÀº ¼ýÀÚ- 0 / ¹®ÀÚ- °ø¹é / boolean- false/ Å¬·¡½º·Î ¸¸µç ¸ðµç ¸â¹öº¯¼ö- null
+// VO(value object) í´ëž˜ìŠ¤: ì²˜ë¦¬í•  ë°ì´í„° í•œ ê±´ê³¼ ë°ì´í„°ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œì„ ê¸°ì–µí•˜ëŠ” í´ëž˜ìŠ¤ DTO(data trasfer object)
+// bean : ë°ì´í„°ë¥¼ ì €ìž¥í•  ë©¤ë²„ë³€ìˆ˜(í•„ë“œ)ì™€ ë©¤ë²„ ë³€ìˆ˜ì— ë°ì´í„°ë¥¼ ìž…ì¶œë ¥í•  ìˆ˜ìžˆëŠ” getter & setter ë©”ì†Œë“œë¡œë§Œ êµ¬ì„±ëœ í´ëž˜ìŠ¤
+// ì´ˆê¸°í™”í•˜ì§€ ì•Šì€ ìˆ«ìž- 0 / ë¬¸ìž- ê³µë°± / boolean- false/ í´ëž˜ìŠ¤ë¡œ ë§Œë“  ëª¨ë“  ë©¤ë²„ë³€ìˆ˜- null
 
-// getter´Â private ±ÇÇÑÀ» °¡Áö´Â ¸â¹öº¯¼öÀÇ °ªÀ» ¾ò¾î¿Ã¶§ »ç¿ëÇÑ´Ù.
-// setter´Â private ±ÇÇÑÀ» °¡Áö´Â ¸â¹öº¯¼öÀÇ °ªÀ» ¼öÁ¤ÇÒ¶§ »ç¿ëÇÑ´Ù.
+// getterëŠ” private ê¶Œí•œì„ ê°€ì§€ëŠ” ë©¤ë²„ë³€ìˆ˜ì˜ ê°’ì„ ì–»ì–´ì˜¬ë•Œ ì‚¬ìš©í•œë‹¤.
+// setterëŠ” private ê¶Œí•œì„ ê°€ì§€ëŠ” ë©¤ë²„ë³€ìˆ˜ì˜ ê°’ì„ ìˆ˜ì •í• ë•Œ ì‚¬ìš©í•œë‹¤.
 //------------------------------------------------------------------------------------
 //this
-//»ý¼ºµÈ ÀÎ½ºÅÏ½º ½º½º·Î¸¦ °¡¸®Å°´Â ¿¹¾à¾î.
-//°°Àº Å¬·¡½º³» °°Àº ÀÌ¸§À» »ç¿ëÇÏ´Â Áö¿ª º¯¼ö¿Í ¸â¹öº¯¼ö°¡ ÀÖÀ» °æ¿ì Áö¿ªº¯¼ö¿¡ ¿ì¼±±ÇÀ» ÁØ´Ù.
-//±×·¡¼­ this¸¦ »ý·«ÇÏ°Ô µÇ¸é ÆÄ¶ó¹ÌÅÍ() ·Î »ç¿ëµÇ´Â º¯¼ö·Î ÀÎ½ÄÇÑ´Ù.
-//static¸Þ¼Òµå¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø´Ù.
+//ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ ìŠ¤ìŠ¤ë¡œë¥¼ ê°€ë¦¬í‚¤ëŠ” ì˜ˆì•½ì–´.
+//ê°™ì€ í´ëž˜ìŠ¤ë‚´ ê°™ì€ ì´ë¦„ì„ ì‚¬ìš©í•˜ëŠ” ì§€ì—­ ë³€ìˆ˜ì™€ ë©¤ë²„ë³€ìˆ˜ê°€ ìžˆì„ ê²½ìš° ì§€ì—­ë³€ìˆ˜ì— ìš°ì„ ê¶Œì„ ì¤€ë‹¤.
+//ê·¸ëž˜ì„œ thisë¥¼ ìƒëžµí•˜ê²Œ ë˜ë©´ íŒŒë¼ë¯¸í„°() ë¡œ ì‚¬ìš©ë˜ëŠ” ë³€ìˆ˜ë¡œ ì¸ì‹í•œë‹¤.
+//staticë©”ì†Œë“œì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
 
 //this()
-//»ý¼ºÀÚ ³»ºÎ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖÀ¸¸ç, °°Àº Å¬·¡½ºÀÇ ´Ù¸¥ »ý¼ºÀÚ¸¦ È£ÃâÇÒ¶§ »ç¿ëÇÑ´Ù.
-//this¿Í this()´Â ´Ù¸¥ °³³ä.
-//»ý¼ºÀÚ°¡ Áßº¹µÇ¾îÀÖÀ»¶§ ¶Ç ´Ù¸¥ »ý¼ºÀÚ¸¦ È£ÃâÇÏ°íÀÚ ÇÒ ¶§ »ç¿ë / ¿À¹ö·ÎµùµÈ ´Ù¸¥ »ý¼ºÀÚ ¸Þ¼­µå¸¦ È£ÃâÇÒ ¶§ »ç¿ë
+//ìƒì„±ìž ë‚´ë¶€ì—ì„œë§Œ ì‚¬ìš©í•  ìˆ˜ ìžˆìœ¼ë©°, ê°™ì€ í´ëž˜ìŠ¤ì˜ ë‹¤ë¥¸ ìƒì„±ìžë¥¼ í˜¸ì¶œí• ë•Œ ì‚¬ìš©í•œë‹¤.
+//thisì™€ this()ëŠ” ë‹¤ë¥¸ ê°œë….
+//ìƒì„±ìžê°€ ì¤‘ë³µë˜ì–´ìžˆì„ë•Œ ë˜ ë‹¤ë¥¸ ìƒì„±ìžë¥¼ í˜¸ì¶œí•˜ê³ ìž í•  ë•Œ ì‚¬ìš© / ì˜¤ë²„ë¡œë”©ëœ ë‹¤ë¥¸ ìƒì„±ìž ë©”ì„œë“œë¥¼ í˜¸ì¶œí•  ë•Œ ì‚¬ìš©
 
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
-// ÀÔÃâ·Â
+// ìž…ì¶œë ¥
 /*
-- °¢ Å¸ÀÔÀÇ ºñÆ® Å©±â°è»ê
-System.out.println(Byte.BYTES); //¹ÙÀÌÆ® °è»ê 
-System.out.println(Byte.SIZE); // ºñÆ®°è»ê
+- ê° íƒ€ìž…ì˜ ë¹„íŠ¸ í¬ê¸°ê³„ì‚°
+System.out.println(Byte.BYTES); //ë°”ì´íŠ¸ ê³„ì‚° 
+System.out.println(Byte.SIZE); // ë¹„íŠ¸ê³„ì‚°
 System.out.println((Short.BYTES) + " " +(Short.SIZE));
-System.out.println("byte" + Byte.BYTES +"(¹ÙÀÌÆ®)"+ "-->" + Byte.SIZE + "(ºñÆ®)" + Byte.MIN_VALUE+ "~" +Byte.MAX_VALUE);
-System.out.println("Short" + Short.BYTES +"(¹ÙÀÌÆ®)"+ "-->" + Short.SIZE + "(ºñÆ®)" + Short.MIN_VALUE+ "~" +Short.MAX_VALUE);
-System.out.println("Int" + Integer.BYTES +"(¹ÙÀÌÆ®)"+ "-->" + Integer.SIZE + "(ºñÆ®)" + Integer.MIN_VALUE+ "~" +Integer.MAX_VALUE);
-System.out.println("Long" + Long.BYTES +"(¹ÙÀÌÆ®)"+ "-->" + Long.SIZE + "(ºñÆ®)" + Long.MIN_VALUE+ "~" +Long.MAX_VALUE);
-System.out.println("Char" + Character.BYTES +"(¹ÙÀÌÆ®)"+ "-->" + Character.SIZE + "(ºñÆ®)" + (int)Character.MIN_VALUE+ "~" +(int)Character.MAX_VALUE);
+System.out.println("byte" + Byte.BYTES +"(ë°”ì´íŠ¸)"+ "-->" + Byte.SIZE + "(ë¹„íŠ¸)" + Byte.MIN_VALUE+ "~" +Byte.MAX_VALUE);
+System.out.println("Short" + Short.BYTES +"(ë°”ì´íŠ¸)"+ "-->" + Short.SIZE + "(ë¹„íŠ¸)" + Short.MIN_VALUE+ "~" +Short.MAX_VALUE);
+System.out.println("Int" + Integer.BYTES +"(ë°”ì´íŠ¸)"+ "-->" + Integer.SIZE + "(ë¹„íŠ¸)" + Integer.MIN_VALUE+ "~" +Integer.MAX_VALUE);
+System.out.println("Long" + Long.BYTES +"(ë°”ì´íŠ¸)"+ "-->" + Long.SIZE + "(ë¹„íŠ¸)" + Long.MIN_VALUE+ "~" +Long.MAX_VALUE);
+System.out.println("Char" + Character.BYTES +"(ë°”ì´íŠ¸)"+ "-->" + Character.SIZE + "(ë¹„íŠ¸)" + (int)Character.MIN_VALUE+ "~" +(int)Character.MAX_VALUE);
 */
 //---------------------------------------------------------------------------------------		
 /*
-// º¯¼ö
-// Á¤¼öÇü º¯¼ö 
+// ë³€ìˆ˜
+// ì •ìˆ˜í˜• ë³€ìˆ˜ 
 	byte b = 100;
 	short s = 100;
 	int i = 100;
-	long l = 100L; // ¸ÇµÚ L À» ºÙ¿©¾ßÇÑ´Ù. 
-// ½Ç¼öÇü º¯¼ö
-	float f=3.14f; // ¸ÇµÚ f ¸¦ ºÙ¿©¾ßÇÑ´Ù. 
+	long l = 100L; // ë§¨ë’¤ L ì„ ë¶™ì—¬ì•¼í•œë‹¤. 
+// ì‹¤ìˆ˜í˜• ë³€ìˆ˜
+	float f=3.14f; // ë§¨ë’¤ f ë¥¼ ë¶™ì—¬ì•¼í•œë‹¤. 
 	double d= 3.14;
-// ¹®ÀÚÇü º¯¼ö
+// ë¬¸ìží˜• ë³€ìˆ˜
 	char c = 'c';
-// ¹®ÀÚ¿­ º¯¼ö
+// ë¬¸ìžì—´ ë³€ìˆ˜
 	String s = "hello";
-// ³í¸®Çü º¯¼ö
+// ë…¼ë¦¬í˜• ë³€ìˆ˜
 	boolean b = true;
 */
 
-//º¯¼ö°¡ ÀúÀåµÇ´Â °ø°£ÀÇ Æ¯¼º
-//Á¤¼öÇü: byte- 1byte / short-2byte / int- 4byte / long- 8byte
-//		int num = 1234; // 1234°¡ 4°³ = 4byte
+//ë³€ìˆ˜ê°€ ì €ìž¥ë˜ëŠ” ê³µê°„ì˜ íŠ¹ì„±
+//ì •ìˆ˜í˜•: byte- 1byte / short-2byte / int- 4byte / long- 8byte
+//		int num = 1234; // 1234ê°€ 4ê°œ = 4byte
 //		long number=123456789; // 
 	
-//¹®ÀÚÇü: char- 2byte
-//		char ch='A'; // ¹®ÀÚÇüÀÇ °æ¿ì ³»ºÎÀûÀ¸·Î Á¤¼ö°ªÀ¸·Î ÀÛ¼ºµÇ¾î ÀÖ¾î charº¯È¯½ÃÄÑ Ãâ·Â. 
+//ë¬¸ìží˜•: char- 2byte
+//		char ch='A'; // ë¬¸ìží˜•ì˜ ê²½ìš° ë‚´ë¶€ì ìœ¼ë¡œ ì •ìˆ˜ê°’ìœ¼ë¡œ ìž‘ì„±ë˜ì–´ ìžˆì–´ charë³€í™˜ì‹œì¼œ ì¶œë ¥. 
 		
-//½Ç¼öÇü: float- 4byte / double- 8byte
+//ì‹¤ìˆ˜í˜•: float- 4byte / double- 8byte
 //		double dNum = 3.14;
-//		float fNum = 3.14F; // doubleÇü Ã³·³ ¾²¸é ¿À·ù¶ä. µÚ¿¡ f¹Ýµå½Ã ºÙ¿©¾ßÇÔ!
+//		float fNum = 3.14F; // doubleí˜• ì²˜ëŸ¼ ì“°ë©´ ì˜¤ë¥˜ëœ¸. ë’¤ì— fë°˜ë“œì‹œ ë¶™ì—¬ì•¼í•¨!
 		
-//³í¸®Çü: boolean- 1byte
+//ë…¼ë¦¬í˜•: boolean- 1byte
 
-// ÃÖ¿ì¼±¿¬»êÀÚ :(), [], . (Á¡)
-// ´ÜÇ×¿¬»êÀÚ: +, -, ~, !, (), ++, --
-// »ê¼ú¿¬»êÀÚ: +, -, %, *, /
-// ½¬ÇÁÆ®¿¬»êÀÚ: <<, >>, >>>
-// °ü°è¿¬»êÀÚ: >, <, >=, <=, ==, !=
-// ³í¸®¿¬»êÀÚ: &, ^, |, &&, ||
-// »ïÇ×¿¬»êÀÚ: ?:
-// ´ëÀÔ¿¬»êÀÚ: =, +=, /=, &=, *=, -=, <<=, >>=, >>>= ^=, !=, %=
+// ìµœìš°ì„ ì—°ì‚°ìž :(), [], . (ì )
+// ë‹¨í•­ì—°ì‚°ìž: +, -, ~, !, (), ++, --
+// ì‚°ìˆ ì—°ì‚°ìž: +, -, %, *, /
+// ì‰¬í”„íŠ¸ì—°ì‚°ìž: <<, >>, >>>
+// ê´€ê³„ì—°ì‚°ìž: >, <, >=, <=, ==, !=
+// ë…¼ë¦¬ì—°ì‚°ìž: &, ^, |, &&, ||
+// ì‚¼í•­ì—°ì‚°ìž: ?:
+// ëŒ€ìž…ì—°ì‚°ìž: =, +=, /=, &=, *=, -=, <<=, >>=, >>>= ^=, !=, %=
 			
 //------------------------------------------------------------------------------------
-// printf(print format) : °¡º¯ o (¼Ò¼öÁ¡ º¯°æ) 
-// %s : ¹®ÀÚ¿­
-// %c : 'A'  ½Öµû¿ÈÇ¥ÇÏ¸é ¿À·ù
-// %f : 3.14 : ½Ç¼öÇü
-// %d, 100 : 10Áø¼ö Á¤¼ö
-// %o, 15 : 8Áø¼ö Á¤¼ö
-// %x, 15 : 16Áø¼ö Á¤¼ö (¼Ò¹®ÀÚ Ãâ·Â)
-// %X, 15 : 16Áø¼ö Á¤¼ö (´ë¹®ÀÚ Ãâ·Â)
-// %b, -- : boolean Çü½Ä Ãâ·Â
-// %e : Áö¼öÇ¥Çö½ÄÇü½ÄÀ¸·Î Ãâ·Â
-// %- : Ãâ·ÂÇÒ ÀüÃ¼ÀÚ¸®¼ö°¡ ÁöÁ¤µÈ °æ¿ì ¿ÞÂÊ¿¡ ¸ÂÃç Ãâ·ÂÇÑ´Ù.
-// %0 : Ãâ·ÂÇÒ ÀüÃ¼ ÀÚ¸®¼ö°¡ ÁöÁ¤µÈ °æ¿ì ¿ÞÂÊ¿¡ ³²´ÂÀÚ¸®¿¡ 0À» Ã¤¿ö Ãâ·ÂÇÑ´Ù.
-// %n : Ãâ·ÂÇÒ ÀüÃ¼ ÀÚ¸®¼ö
-// % .m: ¼Ò¼öÁ¡ ¾Æ·¡ ÀÚ¸´¼ö, Àß¸®´Â ÀÚ¸®¿¡¼­ ¹Ý¿Ã¸² ½ÃÄÑ Ãâ·ÂÇÑ´Ù.
-// %t : ÅÇ
-// %n : ÁÙ¹Ù²Þ
+// printf(print format) : ê°€ë³€ o (ì†Œìˆ˜ì  ë³€ê²½) 
+// %s : ë¬¸ìžì—´
+// %c : 'A'  ìŒë”°ì˜´í‘œí•˜ë©´ ì˜¤ë¥˜
+// %f : 3.14 : ì‹¤ìˆ˜í˜•
+// %d, 100 : 10ì§„ìˆ˜ ì •ìˆ˜
+// %o, 15 : 8ì§„ìˆ˜ ì •ìˆ˜
+// %x, 15 : 16ì§„ìˆ˜ ì •ìˆ˜ (ì†Œë¬¸ìž ì¶œë ¥)
+// %X, 15 : 16ì§„ìˆ˜ ì •ìˆ˜ (ëŒ€ë¬¸ìž ì¶œë ¥)
+// %b, -- : boolean í˜•ì‹ ì¶œë ¥
+// %e : ì§€ìˆ˜í‘œí˜„ì‹í˜•ì‹ìœ¼ë¡œ ì¶œë ¥
+// %- : ì¶œë ¥í•  ì „ì²´ìžë¦¬ìˆ˜ê°€ ì§€ì •ëœ ê²½ìš° ì™¼ìª½ì— ë§žì¶° ì¶œë ¥í•œë‹¤.
+// %0 : ì¶œë ¥í•  ì „ì²´ ìžë¦¬ìˆ˜ê°€ ì§€ì •ëœ ê²½ìš° ì™¼ìª½ì— ë‚¨ëŠ”ìžë¦¬ì— 0ì„ ì±„ì›Œ ì¶œë ¥í•œë‹¤.
+// %n : ì¶œë ¥í•  ì „ì²´ ìžë¦¬ìˆ˜
+// % .m: ì†Œìˆ˜ì  ì•„ëž˜ ìžë¦¿ìˆ˜, ìž˜ë¦¬ëŠ” ìžë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼ ì‹œì¼œ ì¶œë ¥í•œë‹¤.
+// %t : íƒ­
+// %n : ì¤„ë°”ê¿ˆ
 // %
 
-// wrapper Å¬·¡½º
-// ±âº» ÀÚ·áÇüµéÀ» °´Ã¼·Î ´Ù·ç´Âµ¥ »ç¿ë / ±âº»¿¡¼­ ¾Õ±ÛÀÚ°¡ ´ë¹®ÀÚ·Î ¹Ù²ï´Ù.
-// WrapperÅ¬·¡½º¸í °´Ã¼¸í  = new WrapperÅ¬·¡½º¸í (°ª);
+// wrapper í´ëž˜ìŠ¤
+// ê¸°ë³¸ ìžë£Œí˜•ë“¤ì„ ê°ì²´ë¡œ ë‹¤ë£¨ëŠ”ë° ì‚¬ìš© / ê¸°ë³¸ì—ì„œ ì•žê¸€ìžê°€ ëŒ€ë¬¸ìžë¡œ ë°”ë€ë‹¤.
+// Wrapperí´ëž˜ìŠ¤ëª… ê°ì²´ëª…  = new Wrapperí´ëž˜ìŠ¤ëª… (ê°’);
 
-// ±âº»ÀÚ·áÇü : byte, short, int, long, float, double, char, boolean, void
-// ·¡ÆÛÅ¬·¡½º : Byte, Short, Integer, Long, Float, Double, Character, Boolean, Void
+// ê¸°ë³¸ìžë£Œí˜• : byte, short, int, long, float, double, char, boolean, void
+// ëž˜í¼í´ëž˜ìŠ¤ : Byte, Short, Integer, Long, Float, Double, Character, Boolean, Void
 
-// ±âº»Å¸ÀÔ ¿¡¼­ ·¡ÆÛÅ¬·¡½º : ¹Ú½Ì(Boxing) / ·¡ÆÛÅ¬·¡½º¿¡¼­ ±âº»Å¸ÀÔ : ¾ð¹Ú½Ì(UnBoxing)
-// »ç¿ë : ¸Å¼­µåÀÇ ÆÄ¶ó¹ÌÅÍ°ªÀº °´Ã¼ÇüÅÂ·Î¸¸ ¹Þ±â ¶§¹®¿¡ ±âº»Å¸ÀÔÀÇ ÀÚ·áÇüÀ» °´Ã¼(Å¬·¡½º)È­ ÇÏ¿© Àü´ÞÇÑ´Ù.
-// ÀåÁ¡ : ±âº» ÀÚ·áÇüÀ» Å¬·¡½ºÈ­ ÇÏ¿© Å¬·¡½ºÀÇ ÀåÁ¡À» È°¿ëÇÒ ¼ö ÀÖ°Ô µÈ´Ù.
+// ê¸°ë³¸íƒ€ìž… ì—ì„œ ëž˜í¼í´ëž˜ìŠ¤ : ë°•ì‹±(Boxing) / ëž˜í¼í´ëž˜ìŠ¤ì—ì„œ ê¸°ë³¸íƒ€ìž… : ì–¸ë°•ì‹±(UnBoxing)
+// ì‚¬ìš© : ë§¤ì„œë“œì˜ íŒŒë¼ë¯¸í„°ê°’ì€ ê°ì²´í˜•íƒœë¡œë§Œ ë°›ê¸° ë•Œë¬¸ì— ê¸°ë³¸íƒ€ìž…ì˜ ìžë£Œí˜•ì„ ê°ì²´(í´ëž˜ìŠ¤)í™” í•˜ì—¬ ì „ë‹¬í•œë‹¤.
+// ìž¥ì  : ê¸°ë³¸ ìžë£Œí˜•ì„ í´ëž˜ìŠ¤í™” í•˜ì—¬ í´ëž˜ìŠ¤ì˜ ìž¥ì ì„ í™œìš©í•  ìˆ˜ ìžˆê²Œ ëœë‹¤.
 
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
-// ±×¿Ü
-// º¯¼öÀÛ¼º½Ã ¿À·ù°¡ ¶ß´Â°ÍÀº º¯¼ö¼±¾ð¸¸ ÇÏ¸é ¾î¶² ³»¿ëÀÌ ÀúÀåµÇ¾îÀÖ´ÂÁö ¸ð¸£±â ¶§¹®¿¡ ¹Ýµå½Ã »ç¿ëÇÏ±âÀü¿¡ ÃÊ±âÈ­¸¦ ½ÃÄÑ¾ßÇÑ´Ù.
-// int sum; (¿À·ù)  ¡æ int sum = 0; (Á¤»ó)
+// ê·¸ì™¸
+// ë³€ìˆ˜ìž‘ì„±ì‹œ ì˜¤ë¥˜ê°€ ëœ¨ëŠ”ê²ƒì€ ë³€ìˆ˜ì„ ì–¸ë§Œ í•˜ë©´ ì–´ë–¤ ë‚´ìš©ì´ ì €ìž¥ë˜ì–´ìžˆëŠ”ì§€ ëª¨ë¥´ê¸° ë•Œë¬¸ì— ë°˜ë“œì‹œ ì‚¬ìš©í•˜ê¸°ì „ì— ì´ˆê¸°í™”ë¥¼ ì‹œì¼œì•¼í•œë‹¤.
+// int sum; (ì˜¤ë¥˜)  â†’ int sum = 0; (ì •ìƒ)
 
-// System.exit(0) ¡æ °­Á¦ÇÁ·Î±×·¥Á¾·á
-// ¹®ÀÚ¸¦ °ö¼À¿¬»êÇÏ¸é ¹®ÀÚÀÇ À¯´ÏÄÚµå °ªÀ¸·Î °öÇÑ´Ù.
-// sc.nextInt ¿Í sc.nextLine() »çÀÌ  sc.nextLine() ¸¦ ÀÔ·ÂÇÏ¿© Å°º¸µå ¹öÆÛ¸¦ ºñ¿î´Ù.
+// System.exit(0) â†’ ê°•ì œí”„ë¡œê·¸ëž¨ì¢…ë£Œ
+// ë¬¸ìžë¥¼ ê³±ì…ˆì—°ì‚°í•˜ë©´ ë¬¸ìžì˜ ìœ ë‹ˆì½”ë“œ ê°’ìœ¼ë¡œ ê³±í•œë‹¤.
+// sc.nextInt ì™€ sc.nextLine() ì‚¬ì´  sc.nextLine() ë¥¼ ìž…ë ¥í•˜ì—¬ í‚¤ë³´ë“œ ë²„í¼ë¥¼ ë¹„ìš´ë‹¤.
 
-// »ïÇ×¿¬»êÀÚ Çüº¯È¯
+// ì‚¼í•­ì—°ì‚°ìž í˜•ë³€í™˜
 //int hour = 16;
-//String number = hour <= 12 ? "¿ÀÀü" : "¿ÀÈÄ";
+//String number = hour <= 12 ? "ì˜¤ì „" : "ì˜¤í›„";
 //System.out.println(number);
 
 // length VS length()
 // int [] aaa= new int[10]; 
-// system.out.println(aaa.length); ¡æ 10   / length´Â ¹è¿­ÀÇ ±æÀÌ°ª  
+// system.out.println(aaa.length); â†’ 10   / lengthëŠ” ë°°ì—´ì˜ ê¸¸ì´ê°’  
 // String bbb = "welcome to seoul" ;
-// system.out.println(bbb.length()); ¡æ 16 / length()´Â ¹®ÀÚ¿­ÀÇ ±æÀÌ°ª
+// system.out.println(bbb.length()); â†’ 16 / length()ëŠ” ë¬¸ìžì—´ì˜ ê¸¸ì´ê°’
 
-// toString ¸Þ¼­µå : ÁÖ·Î ¹Ýº¹¹®À» »ç¿ëÇÏÁö ¾Ê°í ¹è¿­ÀÇ °ªÀ» Ãâ·ÂÇÏ°íÀÚ ÇÒ¶§ »ç¿ëÇÑ´Ù. (ÆÄÀÌ½ã-index¿Í À¯»ç)
+// toString ë©”ì„œë“œ : ì£¼ë¡œ ë°˜ë³µë¬¸ì„ ì‚¬ìš©í•˜ì§€ ì•Šê³  ë°°ì—´ì˜ ê°’ì„ ì¶œë ¥í•˜ê³ ìž í• ë•Œ ì‚¬ìš©í•œë‹¤. (íŒŒì´ì¬-indexì™€ ìœ ì‚¬)
 // int ar[] = {238, 483, 239, 442, 487, 239, 873};
 // System.out.println(Arrays.toString(ar));
 //
-// charAt ¸Þ¼­µå  StringÀ¸·Î ÀúÀåµÈ ¹®ÀÚ¿­Áß¿¡¼­ ÇÑ±ÛÀÚ¸¸ ¼±ÅÃÇØ¼­ char Å¸ÀÔÀ¸·Î º¯È¯ÇØÁØ´Ù.
-// charÅ¸ÀÔÀº ÇÑ ±ÛÀÚ¸¸ ÀúÀåÇÒ ¼öÀÖ´Â º¯¼öÀÌ¾î¼­ ÇÑ±ÛÀÚ¸¸ ÀÔ·Â¹Þ´Â °Íº¸´Ù ¹®ÀÚ¿­·Î ÀÔ·Â¹Þ¾Æ ÇÑ±ÛÀÚ¸¸ Ãâ·ÂÇÏ´Â °ÍÀÌ È¿À²Àû.
+// charAt ë©”ì„œë“œ  Stringìœ¼ë¡œ ì €ìž¥ëœ ë¬¸ìžì—´ì¤‘ì—ì„œ í•œê¸€ìžë§Œ ì„ íƒí•´ì„œ char íƒ€ìž…ìœ¼ë¡œ ë³€í™˜í•´ì¤€ë‹¤.
+// charíƒ€ìž…ì€ í•œ ê¸€ìžë§Œ ì €ìž¥í•  ìˆ˜ìžˆëŠ” ë³€ìˆ˜ì´ì–´ì„œ í•œê¸€ìžë§Œ ìž…ë ¥ë°›ëŠ” ê²ƒë³´ë‹¤ ë¬¸ìžì—´ë¡œ ìž…ë ¥ë°›ì•„ í•œê¸€ìžë§Œ ì¶œë ¥í•˜ëŠ” ê²ƒì´ íš¨ìœ¨ì .
 
-// Å¬·¡½ºÀÇ ±¸ºÐÀ» À§ÇÏ¿© ÁÖ¼®À¸·Î end of class µîÀ¸·Î Ç¥½ÃÇÏ¿© º¸±â ½±µµ·Ï ¸¸µé¾î¾ß ÇÑ´Ù!
-
-// ¸Þ¼­µå¿Í ÇÔ¼öÀÇ Â÷ÀÌ : () ÀÇ À¯¹«
+// í´ëž˜ìŠ¤ì˜ êµ¬ë¶„ì„ ìœ„í•˜ì—¬ ì£¼ì„ìœ¼ë¡œ end of class ë“±ìœ¼ë¡œ í‘œì‹œí•˜ì—¬ ë³´ê¸° ì‰½ë„ë¡ ë§Œë“¤ì–´ì•¼ í•œë‹¤!
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
-// ¿¹¿ÜÀÇ Á¾·ù 
-// RuntimeException : ÁÖ·Î ÇÁ·Î±×·¡¹Ö ¹ö±×³ª ³í¸®¿À·ù¿¡¼­ ¹ß»ý / ¹Ýµå½Ã ¿¹¿ÜÃ³¸®ÇÒ ÇÊ¿ä´Â ¾ø´Ù.
-// ArithmeticException : ¼öÇÐÀû¿À·ù / ¾î¶² ¼ö¸¦ 0À¸·Î ³ª´­¶§ ¹ß»ý
-// NullPointerException : Null°´Ã¼¸¦ ÂüÁ¶ÇÒ¶§ ¹ß»ý
-// ClassCastException: ÀûÀýÄ¡ ¸øÇÏ°Ô Å¬·¡½º¸¦ Çü º¯È¯ ÇÏ´Â °æ¿ì
-// NegativeArraySizeException: ¹è¿­ÀÇ Å©±â°¡ À½¼ö°ªÀÎ °æ¿ì
-// OutOfMemoryException: »ç¿ë°¡´ÉÇÑ ¸Þ¸ð¸®°¡ ¾ø´Â °æ¿ì
-// NoClassDefFoundException: ¿øÇÏ´Â Å¬·¡½º¸¦ Ã£Áö ¸øÇÏ¿´À» °æ¿ì
-// ArrayIndexOutOfBoundsException: ¹è¿­À» ÂüÁ¶ÇÏ´Â ÀÎµ¦½º°¡ Àß¸øµÈ °æ¿ì
+// ì˜ˆì™¸ì˜ ì¢…ë¥˜ 
+// RuntimeException : ì£¼ë¡œ í”„ë¡œê·¸ëž˜ë° ë²„ê·¸ë‚˜ ë…¼ë¦¬ì˜¤ë¥˜ì—ì„œ ë°œìƒ / ë°˜ë“œì‹œ ì˜ˆì™¸ì²˜ë¦¬í•  í•„ìš”ëŠ” ì—†ë‹¤.
+// ArithmeticException : ìˆ˜í•™ì ì˜¤ë¥˜ / ì–´ë–¤ ìˆ˜ë¥¼ 0ìœ¼ë¡œ ë‚˜ëˆŒë•Œ ë°œìƒ
+// NullPointerException : Nullê°ì²´ë¥¼ ì°¸ì¡°í• ë•Œ ë°œìƒ
+// ClassCastException: ì ì ˆì¹˜ ëª»í•˜ê²Œ í´ëž˜ìŠ¤ë¥¼ í˜• ë³€í™˜ í•˜ëŠ” ê²½ìš°
+// NegativeArraySizeException: ë°°ì—´ì˜ í¬ê¸°ê°€ ìŒìˆ˜ê°’ì¸ ê²½ìš°
+// OutOfMemoryException: ì‚¬ìš©ê°€ëŠ¥í•œ ë©”ëª¨ë¦¬ê°€ ì—†ëŠ” ê²½ìš°
+// NoClassDefFoundException: ì›í•˜ëŠ” í´ëž˜ìŠ¤ë¥¼ ì°¾ì§€ ëª»í•˜ì˜€ì„ ê²½ìš°
+// ArrayIndexOutOfBoundsException: ë°°ì—´ì„ ì°¸ì¡°í•˜ëŠ” ì¸ë±ìŠ¤ê°€ ìž˜ëª»ëœ ê²½ìš°
 
-// OtherException : ¹Ýµå½Ã ¿¹¿ÜÃ³¸®¸¦ ÇØ¾ßÇÑ´Ù.
+// OtherException : ë°˜ë“œì‹œ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•´ì•¼í•œë‹¤.
