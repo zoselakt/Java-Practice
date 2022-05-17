@@ -16,9 +16,6 @@ public class Any_01 {
 //	접근제한자 static 반환타입 (메인)메서드(파라미터 = (문자열 [배열] 변수명) {
 // }}
 
-//1. 접근제한자 : public, private, protected, default
-//			   public : 어떤 클래스에서도 접근이 가능할 수있도록 열어 놓는다는 의미.
-//			   public메소드를 통해 private 멤버에 접근할 수 있다. public과 private사이 인터페이스 역할을 수행하기도 함.
 //2. 파라미터 : 메서드(함수) 호출시 파라미터 값을 넣어서 호출할 수 있음. / String 값으로[]안에 인수들값을 받는다.
 //			 args는 argument로 컴퓨터 쪽 용어로 인수, 독립변수의 뜻을 가지고 있음. 
 //3. 반환타입(리턴타입) : 반환할 값이 있다 없다 → 없으면 void / 특별한 반환값이 없이 작동만 수행시키기위하여 사용
@@ -48,13 +45,11 @@ default(package): 현재 패키지에서는 public처럼 사용되고 다른패�
 				  상속가능 접근권한을 생략하면 package가 된다.
 protected: 현재클래스와 현재 클래스를 상속받은 자식클래스만 접근가능, 상속 가능
 public: 아무곳에서나 자유롭게 사용할 수 있다. 상속가능 
-
-protected, private는 클래스 앞에 못쓴다. 단 내부클래스(Inner) 앞에는 가능
  */
 //------------------------------------------------------------------------------------
 /*
 생성자(constructor) : Class1 class = new Class1();
-인스턴스 객체를 생성할 호출 / 생성자 이름은 해당 클래스명과 동일하게 설정
+인스턴스 객체를 생성할 호출 / 생성자 이름은 해당 클래스명과 동일하게 설정
 메소드와 비슷하나 생성자 앞에는 접근제어자(public)만 올수있다 (static X불가) 
 반환타입이 없으므로 return이나 void를 붙일수 없다.  
 생성자를 선언하지 않으면 기본생성자를 기본으로 만들어준다. 하지만 생성자 선언하면 자동으로 생성되지 않는다.
@@ -179,11 +174,6 @@ System.out.println("Char" + Character.BYTES +"(바이트)"+ "-->" + Character.SI
 // System.exit(0) → 강제프로그램종료
 // 문자를 곱셈연산하면 문자의 유니코드 값으로 곱한다.
 // sc.nextInt 와 sc.nextLine() 사이  sc.nextLine() 를 입력하여 키보드 버퍼를 비운다.
-
-// 삼항연산자 형변환
-//int hour = 16;
-//String number = hour <= 12 ? "오전" : "오후";
-//System.out.println(number);
 
 // length VS length()
 // int [] aaa= new int[10]; 
